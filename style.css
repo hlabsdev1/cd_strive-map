@@ -1,0 +1,8 @@
+svg [hs-target-country] {
+  fill: #604d64;
+  cursor: pointer;
+}
+
+.map_popup.is--hide {
+  display: none;
+}
