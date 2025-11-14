@@ -155,7 +155,7 @@ const mapContent = [
     partners: [
       {
         name: 'Scale partner: Grab',
-        logo: '',
+        logo: [mImgs[0].images[1]],
         description:
           'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
         outcomes: [
@@ -167,7 +167,7 @@ const mapContent = [
       },
       {
         name: 'ChatGenie',
-        logo: '',
+        logo: [mImgs[0].images[6]],
         description:
           'Enabled small businesses to sell within popular social media and messaging apps, turning conversations into conversions. With support from the Mastercard Strive Innovation Fund, ChatGenie tested new features to bring added value to Filipino micro-enterprises engaging in social commerce.',
         outcomes: [
@@ -179,7 +179,7 @@ const mapContent = [
       },
       {
         name: 'Boost Capital',
-        logo: '',
+        logo: [mImgs[0].images[0]],
         description:
           'A white-labeled onboarding platform enabling micro- and small enterprises to access digital financial services via chat-based technology, AI-driven verification, and financial literacy—no app download needed. Builds on prior work in Cambodia linking financial literacy education to improved loan performance.',
         outcomes: [
@@ -191,7 +191,7 @@ const mapContent = [
       },
       {
         name: '&frnds',
-        logo: '',
+        logo: [mImgs[0].images[3]],
         description:
           'Piloted with 2 wholesalers serving 800+ micro-retailers. 350 of these placed at least one AI-based order, and 165 placed multiple orders.',
         outcomes: [
@@ -216,7 +216,7 @@ const mapContent = [
     partners: [
       {
         name: 'Alner',
-        logo: '',
+        logo: [mImgs[18].images[4]],
         description:
           'Equipped micro-retailers with a reusable packaging solution to tackle plastic waste.Through one mobile app, businesses can source refillable essential goods and manage orders, inventory, and sales—boosting income and promoting more sustainable retail practices.',
         outcomes: [
@@ -241,7 +241,7 @@ const mapContent = [
     partners: [
       {
         name: 'SoBanHang',
-        logo: '',
+        logo: [mImgs[21].images[4]],
         description:
           'Supported micro- and small businesses with digital management, e-commerce, and AI-powered tools to streamline operations, gain market insights, and manage cross-border procurement—while assessing how digital adoption can boost revenue and expand access to formal credit.',
         outcomes: [
@@ -261,7 +261,7 @@ const mapContent = [
     partners: [
       {
         name: 'SkyEye',
-        logo: '',
+        logo: [mImgs[20].images[0]],
         description:
           'Geospatial technology company using its AI-powered “Maua” e-commerce app to help small businesses overcome barriers such as limited digital payment options and difficulties in locating customers. Offers sales trend and cost analysis, enabling smarter decisions, greater efficiency, and access to new markets.',
         outcomes: [
@@ -280,7 +280,7 @@ const mapContent = [
     partners: [
       {
         name: 'ShopUp',
-        logo: '',
+        logo: [mImgs[1].images[0]],
         description: `Built a network of digitally powered, women-led retailers in rural and semi-urban areas, supporting them to deliver essential household products at affordable prices to their local communities. Women entrepreneurs use ShopUp's B2B platform, Mokam, to offer a wide portfolio of goods, manage last-mile logistics, and create sustainable livelihoods.`,
         outcomes: [
           'Mastercard Strive and Gates Foundation are funding the pilot until 2026.',
@@ -299,7 +299,7 @@ const mapContent = [
     partners: [
       {
         name: 'Beksar',
-        logo: '',
+        logo: [mImgs[11].images[1]],
         description: `Embedded finance solution that supports small businesses with retail automation, digital financial services, and data-driven tools to boost efficiency and resilience. By integrating with local financial institutions, it leverages real-time data for credit-scoring and inclusive financing, enabling access to working capital for businesses—especially women-led enterprises—that often lack formal financial records.`,
         outcomes: [],
         link: 'https://www.strivecommunity.org/programs/Beksar-kazakhstan ',
@@ -313,7 +313,7 @@ const mapContent = [
     partners: [
       {
         name: 'Mayasoft',
-        logo: '',
+        logo: [],
         description: `Mayasoft’s MARTA solution is a mobile point-of-sale system with no subscription or hardware costs that works on any NFC-enabled smartphone, even with poor internet connection. With MARTA, small businesses can accept digital payments and unlock working capital through instant merchant settlements and data trails for credit assessments.`,
         outcomes: [
           'Reached over 320,000 micro- and small businesses. Over 27,000 trialed the product and more than 14,000 adopted it for continued use.',
@@ -331,7 +331,7 @@ const mapContent = [
     partners: [
       {
         name: 'Africa 118',
-        logo: '',
+        logo: [mImgs[14].images[0]],
         description: `Africa 118’s Digital Presence Pack supported small businesses to build and grow a strong online presence through Google listings, e-commerce tools, and digital training. With support from Mastercard Strive, it expanded its offering to include social media integration and a nationwide small business market intelligence database.`,
         outcomes: [
           '586 small businesses improved their digital skills (353% of target).',
@@ -356,7 +356,7 @@ const mapContent = [
     partners: [
       {
         name: 'MESH',
-        logo: '',
+        logo: [mImgs[13].images[3]],
         description: `MESH is an online community for informal young entrepreneurs in Kenya. Mastercard Strive supported platform development and growth, the creation of training tools, and a pilot of a credit product for entrepreneurs using MESH's data and community approach to financial inclusion.`,
         outcomes: [
           'After joining MESH, 53% of surveyed users reported earning more than KES 6,000 per month, up from 27% before joining MESH.',
@@ -367,7 +367,7 @@ const mapContent = [
       },
       {
         name: 'Novek',
-        logo: '',
+        logo: [mImgs[13].images[1]],
         description: `Designs and builds tech-enabled vending machines that dispense household staples to increase sales for micro-retailers. With support from Mastercard Strive, their washing powder dispensers added a new revenue stream, reduced stockouts, and eliminated single-use plastics for micro- and small retailers.`,
         outcomes: [
           'Micro-retailers sold over 50 kg of product in four months.',
@@ -378,7 +378,7 @@ const mapContent = [
       },
       {
         name: 'XRGlobal',
-        logo: '',
+        logo: [mImgs[13].images[2]],
         description: `XR Global, in partnership with Hello Tractor in Kenya, tested the potential of virtual reality (VR) for upskilling small businesses through an immersive multi-user learning environment.`,
         outcomes: [
           '200 small businesses reported increased knowledge and skill',
@@ -390,7 +390,7 @@ const mapContent = [
       },
       {
         name: 'Arifu',
-        logo: '',
+        logo: [mImgs[13].images[0]],
         description: `Arifu is an edtech provider offering bite-sized, interactive training via a chatbot on popular messaging apps like WhatsApp. With support from Mastercard Strive, they supported small businesses to digitize and build resilience by improving operational efficiency, financial management, and online sales in collaboration with major players like MTN.`,
         outcomes: [
           `Through the MTN partnership, in Côte d'Ivoire, the content has reached over 988,000 MTN customers, merchants, and agents, with more than 72,000 actively engaging with the MoMo Coach app.`,
@@ -408,8 +408,20 @@ const mapContent = [
     imgList: [mImgs[16].images[0], mImgs[16].images[1], mImgs[16].images[2]],
     partners: [
       {
+        name: 'Arifu',
+        logo: [mImgs[16].images[0]],
+        description: `Arifu is an edtech provider offering bite-sized, interactive training via a chatbot on popular messaging apps like WhatsApp. With support from Mastercard Strive, they supported small businesses to digitize and build resilience by improving operational efficiency, financial management, and online sales in collaboration with major players like MTN.`,
+        outcomes: [
+          `Through the MTN partnership, in Côte d'Ivoire, the content has reached over 988,000 MTN customers, merchants, and agents, with more than 72,000 actively engaging with the MoMo Coach app.`,
+          `Gates Foundation used Arifu’s business content to extend reach to women entrepreneurs in Kenya.`,
+          `Some high-engagers were 19% more likely to report cost savings and 13% more likely to save business earnings.`,
+          `Digitally advanced users were 74% more likely to use new services.`,
+        ],
+        link: 'https://strivecommunity.org/programs/arifu',
+      },
+      {
         name: 'Boost Technology',
-        logo: '',
+        logo: [mImgs[16].images[2]],
         description: `A retailer-focused commerce platform powering growth for Africa’s women-led micro-businesses. Their program used transaction data to provide retailers with real-time insights to make more informed decisions and drive improved business outcomes, alongside credit and digital ordering.`,
         outcomes: [
           '84% of participating micro- and small retailers reported an increase in business revenue.',
@@ -427,7 +439,7 @@ const mapContent = [
     partners: [
       {
         name: 'Lady Business Club (LBC)',
-        logo: '',
+        logo: [mImgs[9].images[0]],
         description: `From late 2023 to June 2025, LBC’s GO DIGITAL program enabled women-led small businesses to adopt and embed appropriate digital tools in their day-to-day operations, supporting them to grow and build business confidence.`,
         outcomes: [
           `Program reached 333,000 women-led small businesses.`,
@@ -447,7 +459,7 @@ const mapContent = [
     partners: [
       {
         name: 'Connectycs',
-        logo: '',
+        logo: [mImgs[8].images[0]],
         description: `Enabled small Spanish hotels to adopt tailored digital solutions that improve bookings, expand market reach, and boost efficiency. With support from Mastercard Strive, Connectycs enhanced its platform with new features and training content, supporting small hotels to access both digital tools and financial opportunities.`,
         outcomes: [
           `291 small hotels reached, exceeding target of 250.`,
@@ -465,7 +477,7 @@ const mapContent = [
     partners: [
       {
         name: 'Tern Eco',
-        logo: '',
+        logo: [mImgs[10].images[0]],
         description: `Tern Eco (now Tern Circular LTD) supports UK retailers to recover products for reuse, resale, or repair, enabling new revenue streams and promoting circular retail practices. With support from Mastercard Strive, it developed a digital platform to simplify circular solutions, turning returns into valuable opportunities`,
         outcomes: [
           `Generated £400,000 in retailer revenue from trade-in and resale.`,
@@ -475,7 +487,7 @@ const mapContent = [
       },
       {
         name: 'Vested Impact',
-        logo: '',
+        logo: [mImgs[10].images[1]],
         description: `An award-winning platform that quantifies the effects of a company's activities on the planet. With Mastercard Strive, Vested Impact delivered an AI-powered portal for automated impact assessment, a tool for summarizing complex data, and a shareable sustainability reporting link for small businesses.`,
         outcomes: [
           `2.7 million small businesses were automatically assessed, proving the technology's scalability.`,
@@ -493,7 +505,7 @@ const mapContent = [
     partners: [
       {
         name: 'FUNDES',
-        logo: '',
+        logo: [mImgs[3].images[1]],
         description: `Redesigned “Pymental,” an online marketplace and learning app, to meet small business needs in Latin America and the Caribbean. The adapted platform offered tailored digital tools, micro-training opportunities, and improved user experience for artisans and craft merchants.`,
         outcomes: [
           `Reached over 44,000 micro- and small businesses.`,
@@ -504,7 +516,7 @@ const mapContent = [
       },
       {
         name: 'Nilus',
-        logo: '',
+        logo: [mImgs[3].images[0]],
         description: `Provides women-led retailers in low-income communities with trade credit to extend flexible payment terms to their consumers and improve food security. With Mastercard Strive’s support, Nilus supported micro-retailers with a digital platform that enables aggregated ordering, short-term trade credit, financial literacy, and data-driven creditworthiness insights.`,
         outcomes: [
           `8,200 community retailers engaged, with 100 gaining first-time access to credit.`,
@@ -523,7 +535,7 @@ const mapContent = [
     partners: [
       {
         name: 'INCAE',
-        logo: '',
+        logo: [mImgs[4].images[0]],
         description: `Mastercard Strive supported INCAE’s EMPRO program to enable women-led small businesses to expand market access, strengthen financial capacity, and adopt digital tools. As part of the program, INCAE collaborated with Banco BHD and PriceSmart to deliver training, mentorship, and new business opportunities to these micro- and small businesses`,
         outcomes: [
           `84% of small businesses improved digital channel use and 59% increased their digital adoption.`,
@@ -541,7 +553,7 @@ const mapContent = [
     partners: [
       {
         name: 'Open Contracting Partnership (OCP)',
-        logo: '',
+        logo: [mImgs[6].images[1]],
         description: `OCP’s platform, CREDERE, piloted the use of open procurement data to expand access to finance to small businesses involved in public procurement. They connected small businesses to financial institutions and generated key insights and data to assess small business creditworthiness and unlock capital.`,
         outcomes: [
           `1,478 small businesses engaged with the platform within 2 months of its launch`,
@@ -552,7 +564,7 @@ const mapContent = [
       },
       {
         name: 'Datasketch',
-        logo: '',
+        logo: [mImgs[6].images[0]],
         description: `Specializes in developing data analytics and AI solutions for small businesses. Through Mastercard Strive, they developed AI tools to help businesses use existing data for decision-making and improved operational efficiency.`,
         outcomes: [
           `10 pilot businesses engaged to test and improve the solution.`,
@@ -571,7 +583,7 @@ const mapContent = [
     partners: [
       {
         name: 'Flourish Fi',
-        logo: '',
+        logo: [mImgs[2].images[1]],
         description:
           'Adapted its gamified financial wellness platform for small businesses in Brazil, using personalized nudges, games, and rewards to promote healthy financial habits and unlock access to responsible credit. They integrated financial trivia content into Brazilian financial service provider platforms, encouraging healthy financial habits among small business customers. Pilots showed gamification can have positive impacts on financial behaviors.',
         outcomes: [
@@ -583,7 +595,7 @@ const mapContent = [
       },
       {
         name: 'Cufa, Alianca, and Flourish Fi',
-        logo: '',
+        logo: [mImgs[2].images[0], mImgs[2].images[1], mImgs[2].images[2]],
         description:
           "Aliança Empreendedora redeveloped the Tamo Junto digital learning platform, targeting 500,000 micro-businesses in Brazil's favelas. The gamified platform offers dual tracks for business digitization and financial literacy, featuring short videos and rewards to promote digital inclusion through accessible education.",
         outcomes: [
@@ -595,7 +607,7 @@ const mapContent = [
       },
       {
         name: 'Hoob Marketing',
-        logo: '',
+        logo: [],
         description:
           "Hoob's Strive for Growth Facebook campaign targeted women-owned and Black-owned small businesses across Brazil, Mexico, Argentina, and Colombia.",
         outcomes: [
@@ -614,7 +626,7 @@ const mapContent = [
     partners: [
       {
         name: 'IMPAQTO',
-        logo: '',
+        logo: [mImgs[7].images[0]],
         description: `IMPAQTO’s VIQTORIA program trained women-led small businesses on digital solutions that accelerate their digital transformation and development. The program supported both local startups and women-led small businesses with training, mentorship, and seed capital, enabling tech startups to adapt their solutions to small business needs and small businesses to adopt digital solutions that truly work for them.
 `,
         outcomes: [
@@ -634,26 +646,25 @@ function addingContent() {
   const hoverWrap = document.querySelector('.map-hover_holder');
   popupWrapper.innerHTML = mapContent
     .map((content) => {
-      const listItems = content.partners[0].outcomes;
-      const listHtml = listItems
-        .map((e) => {
-          return `            
-        <div class="popup-list-item">
-          <div class="popup-list-icon"></div>
-          <div class="popup-list-txt">
-          ${e}
-          </div>
-      </div>`;
-        })
-        .join('');
-
       // console.log(listHtml);
+      let isPartnersOnlyOne = false;
+      console.log(content.partners.length);
       const partnersContent = content.partners
         .map((partner) => {
           return `
                 <div class="map_popup">
                     <div class="map_popup-inner">
-                        <div class="map_popup-top"></div>
+                        <div class="map_popup-top">
+                          ${partner.logo
+                            .map((item) => {
+                              return `
+                              <div class="map_popup-top-img">
+                                  <img src=${item} alt="" class="src">
+                              </div>
+                            `;
+                            })
+                            .join('')}
+                        </div>
                         <div class="map_popup-bottom">
                             <div class="map_popup-bottm-header">
                                 <div class="popup-heading">${partner.name}</div>
@@ -748,6 +759,7 @@ function addingContent() {
 }
 
 function mapClickFunc() {
+  const map = document.querySelector('.h_map');
   const svgTriggers = document.querySelectorAll('svg [hs-target-country]');
   const allPopups = document.querySelectorAll(
     '.map_popup-wrap .map_popup-items'
@@ -776,6 +788,7 @@ function mapClickFunc() {
 
       if (activePopup) {
         activePopup.classList.remove('is--hide');
+        map.style.pointerEvents = 'none';
       }
     });
   });
@@ -785,6 +798,7 @@ function mapClickFunc() {
       allPopups.forEach((popup) => {
         popup.classList.add('is--hide');
       });
+      map.style.pointerEvents = 'auto';
     });
   });
 }
