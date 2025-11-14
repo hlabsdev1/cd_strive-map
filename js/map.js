@@ -204,6 +204,25 @@ const mapContent = [
     ],
   },
   {
+    name: 'Cambodia',
+    id: 'cambodia',
+    imgList: [mImgs[19].images[0]],
+    partners: [
+      {
+        name: 'Boost Capital',
+        logo: [mImgs[19].images[0]],
+        description:
+          'A white-labeled onboarding platform enabling micro- and small enterprises to access digital financial services via chat-based technology, AI-driven verification, and financial literacy—no app download needed. Builds on prior work in Cambodia linking financial literacy education to improved loan performance.',
+        outcomes: [
+          'Boost Capital partnered with more than 15 financial service providers to enable digital onboarding.',
+          'Boost Capital enhanced its AI technology for dialect recognition and document validation.',
+          'Boost Capital found that financial education users tend to be more financially responsible, with 15% more likely to have repaid loans on time in Cambodia.',
+        ],
+        link: 'https://www.strivecommunity.org/programs/boost-capital-philippines',
+      },
+    ],
+  },
+  {
     name: 'Indonesia',
     id: 'indonesia',
     imgList: [
@@ -214,6 +233,18 @@ const mapContent = [
       mImgs[18].images[4],
     ],
     partners: [
+      {
+        name: 'Scale partner: Grab',
+        logo: [mImgs[18].images[1]],
+        description:
+          'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
+        outcomes: [
+          'Upskilling content reached 235,000 Grab drivers and merchants',
+          'Driver-learners adopted 1.3 times more digital tools than non-learners.',
+          'Over 90% of Grab drivers felt inspired to start a new business after watching  micro-training videos.',
+        ],
+        link: 'https://strivecommunity.org/programs/micro-learning-videos',
+      },
       {
         name: 'Alner',
         logo: [mImgs[18].images[4]],
@@ -239,6 +270,18 @@ const mapContent = [
       mImgs[21].images[4],
     ],
     partners: [
+      {
+        name: 'Scale partner: Grab',
+        logo: [mImgs[21].images[1]],
+        description:
+          'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
+        outcomes: [
+          'Upskilling content reached 235,000 Grab drivers and merchants',
+          'Driver-learners adopted 1.3 times more digital tools than non-learners.',
+          'Over 90% of Grab drivers felt inspired to start a new business after watching  micro-training videos.',
+        ],
+        link: 'https://strivecommunity.org/programs/micro-learning-videos',
+      },
       {
         name: 'SoBanHang',
         logo: [mImgs[21].images[4]],
@@ -403,6 +446,25 @@ const mapContent = [
     ],
   },
   {
+    name: 'Uganda',
+    id: 'uganda',
+    imgList: [mImgs[12].images[0], mImgs[12].images[1]],
+    partners: [
+      {
+        name: 'Arifu',
+        logo: [mImgs[12].images[0]],
+        description: `Arifu is an edtech provider offering bite-sized, interactive training via a chatbot on popular messaging apps like WhatsApp. With support from Mastercard Strive, they supported small businesses to digitize and build resilience by improving operational efficiency, financial management, and online sales in collaboration with major players like MTN.`,
+        outcomes: [
+          `Through the MTN partnership, in Côte d'Ivoire, the content has reached over 988,000 MTN customers, merchants, and agents, with more than 72,000 actively engaging with the MoMo Coach app.`,
+          'Gates Foundation used Arifu’s business content to extend reach to women entrepreneurs in Kenya.',
+          'Some high-engagers were 19% more likely to report cost savings and 13% more likely to save business earnings.',
+          'Digitally advanced users were 74% more likely to use new services.',
+        ],
+        link: 'https://strivecommunity.org/programs/arifu ',
+      },
+    ],
+  },
+  {
     name: 'Nigeria',
     id: 'nigeria',
     imgList: [mImgs[16].images[0], mImgs[16].images[1], mImgs[16].images[2]],
@@ -517,6 +579,25 @@ const mapContent = [
       {
         name: 'Nilus',
         logo: [mImgs[3].images[0]],
+        description: `Provides women-led retailers in low-income communities with trade credit to extend flexible payment terms to their consumers and improve food security. With Mastercard Strive’s support, Nilus supported micro-retailers with a digital platform that enables aggregated ordering, short-term trade credit, financial literacy, and data-driven creditworthiness insights.`,
+        outcomes: [
+          `8,200 community retailers engaged, with 100 gaining first-time access to credit.`,
+          `Embedded financial literacy training boosted confidence and business skills in women business owners.`,
+          `71 retailers digitized operations, improving efficiency and resilience.`,
+          `Retailers reported reduced stockouts and stronger capacity to serve low-income neighborhoods`,
+        ],
+        link: 'https://strivecommunity.org/programs/nilus',
+      },
+    ],
+  },
+  {
+    name: 'Argentina',
+    id: 'argentina',
+    imgList: [mImgs[5].images[0]],
+    partners: [
+      {
+        name: 'Nilus',
+        logo: [mImgs[5].images[0]],
         description: `Provides women-led retailers in low-income communities with trade credit to extend flexible payment terms to their consumers and improve food security. With Mastercard Strive’s support, Nilus supported micro-retailers with a digital platform that enables aggregated ordering, short-term trade credit, financial literacy, and data-driven creditworthiness insights.`,
         outcomes: [
           `8,200 community retailers engaged, with 100 gaining first-time access to credit.`,
