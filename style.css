@@ -1,10 +1,77 @@
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans/PublicSans-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans/PublicSans-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans/PublicSans-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  src: url('/fonts/public-sans/PublicSans-Bold.ttf');
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: currentColor;
+}
+
 .map_section {
   font-size: 1rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Public Sans';
+  line-height: 130%;
+  background-color: #F7F7F7;
+}
+
+.map_wrap {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 90rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+}
+
+.h_map {
+    z-index: 1;
+    aspect-ratio: 12.05 / 6.41;
+    width: 100%;
+    position: relative;
 }
 
 svg [hs-target-country] {
   fill: #604d64;
   cursor: pointer;
+    transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
+}
+
+.map_popup-wrap {
+    z-index: 3;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    inset: 0%;
 }
 
 .map_popup-items {
@@ -41,6 +108,94 @@ svg [hs-target-country] {
   opacity: 0;
   pointer-events: none;
   transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.map_popup-inner {
+    border-left: 3.8px solid #ff321d;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.map_popup-top {
+  width: 100%;
+}
+
+.map_popup-bottom {
+    color: #fff;
+    background-color: #331a38;
+    flex: 1;
+    width: 100%;
+    min-height: 5rem;
+    padding: 1.875rem 3rem 1.875rem 1.625rem;
+    overflow-y: auto;
+}
+
+.popup-heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.popup-body {
+  padding-top: 1.25rem;
+}
+
+.popup-list-wrap {
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    flex-flow: column;
+    padding-top: 1.25rem;
+    display: flex;
+    padding-bottom: 1.25rem;
+}
+
+.popup-list-item {
+      grid-column-gap: .625rem;
+    grid-row-gap: .625rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.popup-list-icon {
+    background-color: #f53;
+    flex: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-top: 0.2rem;
+}
+
+.popup-list-txt {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.popup_link {
+  padding: 8px 23px;
+  border-left: 5px solid #FF321D;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: all .375s cubic-bezier(.445, .05, .55, .95);
+}
+
+.popup_link:hover {
+  background-color: white;
+  color: #331A38;
+}
+
+
+
+.map_hovered-wrap {
+    z-index: 2;
+    pointer-events: none;
+    position: absolute;
+    inset: 0%;
 }
 
 .map_popup.is--active {
@@ -57,6 +212,7 @@ svg [hs-target-country] {
   align-items: center;
   justify-content: center;
   transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
+    font-size: clamp(0.6em, 1vw, 1em);
 }
 
 .map-tag_holder.is--hide {
@@ -73,9 +229,12 @@ svg [hs-target-country] {
     gap: 10px;
     color: #604d64;
     text-transform: uppercase;
-    font-size: 0.8125rem;
+    font-size: 0.812em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     width: 0px;
     height: 0px;
+    line-height: 100%;
 
 }
 
@@ -84,6 +243,110 @@ svg [hs-target-country] {
   height: 1px;
   background-color: currentColor;
   flex: 0 0 auto;
+}
+/* global map line verticle */
+.map-tag[hs-target-country="mexico"] .map-tab_line, 
+.map-tag[hs-target-country="indonesia"] .map-tab_line,
+.map-tag[hs-target-country="bangladesh"] .map-tab_line,
+.map-tag[hs-target-country="kazakhstan"] .map-tab_line,
+.map-tag[hs-target-country="uzbekistan"] .map-tab_line,
+.map-tag[hs-target-country="kenya"] .map-tab_line,
+.map-tag[hs-target-country="uk"] .map-tab_line,
+.map-tag[hs-target-country="nigeria"] .map-tab_line,
+.map-tag[hs-target-country="poland"] .map-tab_line {
+  width: 1px;
+  height: 20px;
+}
+/* global horz flex reverse */
+.map-tag[hs-target-country="samoa"],
+.map-tag[hs-target-country="spain"],
+.map-tag[hs-target-country="colombia"],
+.map-tag[hs-target-country="ecuador"] {
+  flex-direction: row-reverse;
+}
+
+/* global verticle flex */
+.map-tag[hs-target-country="mexico"], 
+.map-tag[hs-target-country="indonesia"],
+.map-tag[hs-target-country="uzbekistan"],
+.map-tag[hs-target-country="kenya"],
+.map-tag[hs-target-country="poland"] {
+  flex-direction: column;
+}
+
+/* global verticle flex reverse */
+.map-tag[hs-target-country="bangladesh"],
+.map-tag[hs-target-country="kazakhstan"],
+.map-tag[hs-target-country="nigeria"],
+.map-tag[hs-target-country="uk"] {
+  flex-direction: column-reverse;
+}
+
+.map-tag[hs-target-country="mexico"] {
+  left: 12%;
+  top: 45%;
+}
+
+.map-tag[hs-target-country="indonesia"] {
+  bottom: 41%;
+  right: 22%;
+}
+
+.map-tag[hs-target-country="vietnam"] {
+  top: 44%;
+  right: 21.5%;
+}
+.map-tag[hs-target-country="samoa"] {
+  bottom: 31%;
+  right: 2%;
+}
+.map-tag[hs-target-country="bangladesh"] {
+  top: 41%;
+  right: 26.5%;
+}
+.map-tag[hs-target-country="kazakhstan"] {
+  top: 22%;
+  right: 36%;
+}
+.map-tag[hs-target-country="uzbekistan"] {
+  top: 30%;
+  right: 36%;
+}
+.map-tag[hs-target-country="ethiopia"] {
+  bottom: 46%;
+  right: 40.5%;
+}
+.map-tag[hs-target-country="kenya"] {
+  bottom: 41%;
+  right: 43%;
+}
+.map-tag[hs-target-country="nigeria"] {
+  bottom: 49%;
+  left: 48%;
+}
+.map-tag[hs-target-country="poland"] {
+  top: 22%;
+  right: 50%;
+}
+.map-tag[hs-target-country="spain"] {
+  top: 31%;
+  left: 43%;
+}
+.map-tag[hs-target-country="uk"] {
+  top: 19%;
+  right: 56%;
+}
+.map-tag[hs-target-country="dominican-republic"] {
+  bottom: 54.7%;
+  left: 21.8%;
+}
+.map-tag[hs-target-country="colombia"] {
+  bottom: 44%;
+  left: 19%;
+}
+.map-tag[hs-target-country="ecuador"] {
+  bottom: 41%;
+  left: 18%;
 }
 
 .map-tag[hs-target-country="philippines"] {
@@ -107,8 +370,10 @@ svg [hs-target-country] {
 /* MAP HOVER ITEMS */
 .map-hover_item {
     position: absolute;
+    /* top: 50%;
+    left: 50%; */
     z-index: 5;
-    width: 9.375rem;
+    width: 9.375em;
     display: flex;
     flex-direction: column;
     transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
@@ -123,25 +388,142 @@ svg [hs-target-country] {
   pointer-events: auto;
 }
 
+.map-hover_item[hs-target-country="mexico"] {
+  left: 17%;
+  top: 37%;
+}
+
+.map-hover_item[hs-target-country="indonesia"] {
+  bottom: 14%;
+  right: 17%;
+}
+
+.map-hover_item[hs-target-country="vietnam"] {
+  top: 42%;
+  right: 9.5%;
+}
+.map-hover_item[hs-target-country="samoa"] {
+  bottom: 26%;
+  right: 2.5%;
+}
+.map-hover_item[hs-target-country="bangladesh"] {
+  top: 21%;
+  right: 15.5%;
+}
+.map-hover_item[hs-target-country="kazakhstan"] {
+  top: 17%;
+  right: 20%;
+}
+.map-hover_item[hs-target-country="uzbekistan"] {
+  top: 33%;
+  right: 31%;
+}
+.map-hover_item[hs-target-country="ethiopia"] {
+  bottom: 43%;
+  right: 29.5%;
+}
+.map-hover_item[hs-target-country="kenya"] {
+  bottom: 20%;
+  right: 31%;
+}
+.map-hover_item[hs-target-country="nigeria"] {
+  bottom: 52%;
+  right: 47%;
+}
+.map-hover_item[hs-target-country="poland"] {
+  top: 10%;
+  right: 45%;
+}
+
+.map-hover_item[hs-target-country="spain"] {
+  width: 8.5em;
+  top: 27%;
+  left: 32%;
+}
+.map-hover_item[hs-target-country="uk"] {
+  top: 17%;
+  right: 59%;
+}
+.map-hover_item[hs-target-country="dominican-republic"] {
+  bottom: 44.7%;
+  left: 23.8%;
+}
+.map-hover_item[hs-target-country="colombia"] {
+  bottom: 43%;
+  left: 23%;
+}
+.map-hover_item[hs-target-country="ecuador"] {
+  bottom: 24%;
+  left: 8%;
+}
+
+.map-hover_item[hs-target-country="philippines"] {
+  right: 17.5%;
+  bottom: 26%;
+}
+
+.map-hover_item[hs-target-country="brazil"] {
+  left: 34%;
+  bottom: 18%;
+}
+
+.map-hover_item[hs-target-country="argentina"] {
+  left: 20%;
+  bottom: 10%;
+}
+
+.map-hover_item[hs-target-country="uganda"] {
+  right: 30%;
+  bottom: 10%;
+}
+
+.map-hover_item[hs-targer-country="ivory-coast"] {
+  left: 25%;
+  bottom: 20%;
+}
+
 .map-hover_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 5px;
     background-color: rgba(255, 255, 255, 0.70);
+    padding: 10px 4px;
 }
+
+.map-hover_item[hs-target-country="poland"] .map-hover_grid,
+.map-hover_item[hs-target-country="ecuador"] .map-hover_grid,
+.map-hover_item[hs-target-country="spain"] .map-hover_grid,
+.map-hover_item[hs-target-country="ethiopia"] .map-hover_grid,
+.map-hover_item[hs-target-country="bangladesh"] .map-hover_grid,
+.map-hover_item[hs-target-country="samoa"] .map-hover_grid {
+  grid-template-columns: 1fr;
+}
+
 .map-hover-country {
   border-left: 3px solid;
   border-color: #FF321D;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 2px;
+  padding: 4px 2px;
   background-color: white;
 }
 
 .map-hover_img, .map-hover_img img {
-  width: 100%
+  width: 100%;
+  object-fit: contain;
+}
+
+.map-hover_img {
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-hover_img img {
+  height: 100%;
 }
 
 
@@ -149,8 +531,22 @@ svg [hs-target-country] {
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     display: flex;
+    margin-top: 1rem;
+}
+
+.popup-close-icon {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 10px;
+  transition: color .375s cubic-bezier(.445, .05, .55, .95);
+}
+
+.popup-close-icon:hover {
+  color: #FF5533;
 }
 
 .popup-arrow-wrap {
@@ -168,6 +564,11 @@ svg [hs-target-country] {
     align-items: center;
     width: 2rem;
     display: flex;
+    transition: backgroundColor .375s cubic-bezier(.445, .05, .55, .95);
+}
+
+.popup-arrow:hover {
+  background-color: #FF5533;
 }
 
 .popup-arrow svg {

@@ -1,6 +1,7 @@
 const mImgs = [
   {
     name: 'Philippines',
+    order: 0,
     images: [
       'images/boost-capital.svg',
       'images/grab.svg',
@@ -9,6 +10,129 @@ const mImgs = [
       'images/ukmindonesia.svg',
       'images/bayan-academy.svg',
       'images/chatgenie.svg',
+    ],
+  },
+  {
+    name: 'Bangladesh',
+    order: 1,
+    images: ['images/shopup.svg'],
+  },
+  {
+    name: 'Brazil',
+    order: 2,
+    images: ['images/cufa.svg', 'images/flourish.svg', 'images/alianca.svg'],
+  },
+  {
+    name: 'Mexico',
+    order: 3,
+    images: ['images/nilus.svg', 'images/fundes.svg'],
+  },
+  {
+    name: 'Dominican',
+    order: 4,
+    images: ['images/incae.svg'],
+  },
+  {
+    name: 'Argentina',
+    order: 5,
+    images: ['images/nilus.svg'],
+  },
+  {
+    name: 'Columbia',
+    order: 6,
+    images: ['images/data-sketch.svg', 'images/open-c-p.svg'],
+  },
+  {
+    name: 'Ecuador',
+    order: 7,
+    images: ['images/impaqto.svg'],
+  },
+  {
+    name: 'Spain',
+    order: 8,
+    images: ['images/connectycs.svg'],
+  },
+  {
+    name: 'Poland',
+    order: 9,
+    images: ['images/lbc.svg'],
+  },
+  {
+    name: 'UK',
+    order: 10,
+    images: ['images/tern.svg', 'images/vested-impact.svg'],
+  },
+  {
+    name: 'Kazakhstan',
+    order: 11,
+    images: ['images/accion.svg', 'images/beksar.svg'],
+  },
+  {
+    name: 'Uganda',
+    order: 12,
+    images: ['images/arifu.svg', 'images/mtn.svg'],
+  },
+  {
+    name: 'Kenya',
+    order: 13,
+    images: [
+      'images/arifu.svg',
+      'images/novek.svg',
+      'images/x-r-global.svg',
+      'images/mesh.svg',
+      'images/mtn.svg',
+    ],
+  },
+  {
+    name: 'Ethiopia',
+    order: 14,
+    images: ['images/africa.svg'],
+  },
+  {
+    name: 'Uzbekistan',
+    order: 15,
+    images: ['images/accion.svg', 'images/marta.svg'],
+  },
+  {
+    name: 'Nigeria',
+    order: 16,
+    images: ['images/arifu.svg', 'images/mtn.svg', 'images/boost.svg'],
+  },
+  {
+    name: 'Ivory Coast',
+    order: 17,
+    images: ['images/arifu.svg', 'images/mtn.svg'],
+  },
+  {
+    name: 'Indonesia',
+    order: 18,
+    images: [
+      'images/wise.svg',
+      'images/grab.svg',
+      'images/ukmindonesia.svg',
+      'images/bayan-academy.svg',
+      'images/alner.svg',
+    ],
+  },
+  {
+    name: 'Cambodia',
+    order: 19,
+    images: ['images/boost-capital.svg'],
+  },
+  {
+    name: 'Samoa',
+    order: 20,
+    images: ['images/skyeye.svg'],
+  },
+  {
+    name: 'Vietnam',
+    order: 21,
+    images: [
+      'images/wise.svg',
+      'images/grab.svg',
+      'images/ukmindonesia.svg',
+      'images/bayan-academy.svg',
+      'images/sobanhang.svg',
     ],
   },
 ];
@@ -83,13 +207,11 @@ const mapContent = [
     name: 'Indonesia',
     id: 'indonesia',
     imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
+      mImgs[18].images[0],
+      mImgs[18].images[1],
+      mImgs[18].images[2],
+      mImgs[18].images[3],
+      mImgs[18].images[4],
     ],
     partners: [
       {
@@ -110,13 +232,11 @@ const mapContent = [
     name: 'Vietnam',
     id: 'vietnam',
     imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
+      mImgs[21].images[0],
+      mImgs[21].images[1],
+      mImgs[21].images[2],
+      mImgs[21].images[3],
+      mImgs[21].images[4],
     ],
     partners: [
       {
@@ -137,15 +257,7 @@ const mapContent = [
   {
     name: 'Samoa',
     id: 'samoa',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[20].images[0]],
     partners: [
       {
         name: 'SkyEye',
@@ -164,15 +276,7 @@ const mapContent = [
   {
     name: 'Bangladesh',
     id: 'bangladesh',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[1].images[0]],
     partners: [
       {
         name: 'ShopUp',
@@ -191,15 +295,7 @@ const mapContent = [
   {
     name: 'Kazakhstan',
     id: 'kazakhstan',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[11].images[0], mImgs[11].images[1]],
     partners: [
       {
         name: 'Beksar',
@@ -213,15 +309,7 @@ const mapContent = [
   {
     name: 'Uzbekistan',
     id: 'uzbekistan',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[15].images[0], mImgs[15].images[1]],
     partners: [
       {
         name: 'Mayasoft',
@@ -239,15 +327,7 @@ const mapContent = [
   {
     name: 'Ethiopia',
     id: 'ethiopia',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[14].images[0]],
     partners: [
       {
         name: 'Africa 118',
@@ -267,13 +347,11 @@ const mapContent = [
     name: 'Kenya',
     id: 'kenya',
     imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
+      mImgs[13].images[0],
+      mImgs[13].images[1],
+      mImgs[13].images[2],
+      mImgs[13].images[3],
+      mImgs[13].images[4],
     ],
     partners: [
       {
@@ -327,15 +405,7 @@ const mapContent = [
   {
     name: 'Nigeria',
     id: 'nigeria',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[16].images[0], mImgs[16].images[1], mImgs[16].images[2]],
     partners: [
       {
         name: 'Boost Technology',
@@ -353,15 +423,7 @@ const mapContent = [
   {
     name: 'Poland',
     id: 'poland',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[9].images[0]],
     partners: [
       {
         name: 'Lady Business Club (LBC)',
@@ -381,15 +443,7 @@ const mapContent = [
   {
     name: 'Spain',
     id: 'spain',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[8].images[0]],
     partners: [
       {
         name: 'Connectycs',
@@ -407,15 +461,7 @@ const mapContent = [
   {
     name: 'UK',
     id: 'uk',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[10].images[0], mImgs[10].images[1]],
     partners: [
       {
         name: 'Tern Eco',
@@ -443,15 +489,7 @@ const mapContent = [
   {
     name: 'Mexico',
     id: 'mexico',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[3].images[0], mImgs[3].images[1]],
     partners: [
       {
         name: 'FUNDES',
@@ -481,15 +519,7 @@ const mapContent = [
   {
     name: 'Dominican Republic',
     id: 'dominican-republic',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[4].images[0]],
     partners: [
       {
         name: 'INCAE',
@@ -507,15 +537,7 @@ const mapContent = [
   {
     name: 'Colombia',
     id: 'colombia',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[6].images[0], mImgs[6].images[1]],
     partners: [
       {
         name: 'Open Contracting Partnership (OCP)',
@@ -545,15 +567,7 @@ const mapContent = [
   {
     name: 'Brazil',
     id: 'brazil',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[2].images[0], mImgs[2].images[1], mImgs[2].images[2]],
     partners: [
       {
         name: 'Flourish Fi',
@@ -596,15 +610,7 @@ const mapContent = [
   {
     name: 'Ecuador',
     id: 'ecuador',
-    imgList: [
-      mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
-      mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
-      mImgs[0].images[6],
-    ],
+    imgList: [mImgs[7].images[0]],
     partners: [
       {
         name: 'IMPAQTO',
@@ -665,6 +671,9 @@ function addingContent() {
                                 })
                                 .join('')}
                             </div>
+                            <a class="popup_link" href="${
+                              partner.link
+                            }">Visit Website</a>
                         </div>
                     </div>
                 </div>
@@ -797,9 +806,15 @@ function mapHoverAnime() {
           hItem.classList.remove('is--active');
         }
       });
+      svgTriggers.forEach((svg) => {
+        if (svg.getAttribute('hs-target-country') !== attr) {
+          svg.style.opacity = 0.3;
+        }
+      });
       if (activeHoverItem) {
         activeHoverItem.classList.add('is--active');
         tagWrapper.classList.add('is--hide');
+        trigger.style.opacity = 1;
       }
     });
     trigger.addEventListener('mouseout', () => {
@@ -807,6 +822,9 @@ function mapHoverAnime() {
         if (hItem.classList.contains('is--active')) {
           hItem.classList.remove('is--active');
         }
+      });
+      svgTriggers.forEach((svg) => {
+        svg.style.opacity = 1;
       });
       tagWrapper.classList.remove('is--hide');
     });
