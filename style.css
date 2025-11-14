@@ -242,7 +242,7 @@ svg [hs-target-country] {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     color: #604d64;
     text-transform: uppercase;
     font-size: 0.812em;
@@ -255,7 +255,7 @@ svg [hs-target-country] {
 }
 
 .map-tab_line {
-  width: 10px;
+  width: 20px;
   height: 1px;
   background-color: currentColor;
   flex: 0 0 auto;
@@ -269,8 +269,7 @@ svg [hs-target-country] {
 .map-tag[hs-target-country="kenya"] .map-tab_line,
 .map-tag[hs-target-country="uk"] .map-tab_line,
 .map-tag[hs-target-country="nigeria"] .map-tab_line,
-.map-tag[hs-target-country="poland"] .map-tab_line,
-.map-tag[hs-target-country="uganda"] .map-tab_line {
+.map-tag[hs-target-country="poland"] .map-tab_line {
   width: 1px;
   height: 20px;
 }
@@ -279,7 +278,8 @@ svg [hs-target-country] {
 .map-tag[hs-target-country="spain"],
 .map-tag[hs-target-country="colombia"],
 .map-tag[hs-target-country="ecuador"],
-.map-tag[hs-target-country="cambodia"] {
+.map-tag[hs-target-country="cambodia"],
+.map-tag[hs-target-country="uganda"] {
   flex-direction: row-reverse;
 }
 
@@ -288,8 +288,7 @@ svg [hs-target-country] {
 .map-tag[hs-target-country="indonesia"],
 .map-tag[hs-target-country="uzbekistan"],
 .map-tag[hs-target-country="kenya"],
-.map-tag[hs-target-country="poland"],
-.map-tag[hs-target-country="uganda"] {
+.map-tag[hs-target-country="poland"] {
   flex-direction: column;
 }
 
@@ -313,7 +312,7 @@ svg [hs-target-country] {
 
 .map-tag[hs-target-country="vietnam"] {
   top: 44%;
-  right: 21.5%;
+  right: 21%;
 }
 .map-tag[hs-target-country="samoa"] {
   bottom: 31%;
@@ -336,13 +335,13 @@ svg [hs-target-country] {
   right: 40.5%;
 }
 .map-tag[hs-target-country="kenya"] {
-  bottom: 41%;
+  bottom: 40%;
   right: 43%;
 }
 
 .map-tag[hs-target-country="uganda"] {
-  bottom: 46%;
-  left: 42.5%;
+  bottom: 43%;
+  left: 55%;
 }
 .map-tag[hs-target-country="nigeria"] {
   bottom: 49%;
@@ -354,7 +353,7 @@ svg [hs-target-country] {
 }
 .map-tag[hs-target-country="spain"] {
   top: 31%;
-  left: 43%;
+  left: 42.6%;
 }
 .map-tag[hs-target-country="uk"] {
   top: 19%;
@@ -501,8 +500,8 @@ svg [hs-target-country] {
 }
 
 .map-hover_item[hs-target-country="argentina"] {
-  left: 20%;
-  bottom: 10%;
+  left: 28%;
+  bottom: 5%;
 }
 
 .map-hover_item[hs-target-country="uganda"] {
@@ -528,7 +527,8 @@ svg [hs-target-country] {
 .map-hover_item[hs-target-country="spain"] .map-hover_grid,
 .map-hover_item[hs-target-country="ethiopia"] .map-hover_grid,
 .map-hover_item[hs-target-country="bangladesh"] .map-hover_grid,
-.map-hover_item[hs-target-country="samoa"] .map-hover_grid {
+.map-hover_item[hs-target-country="samoa"] .map-hover_grid,
+.map-hover_item[hs-target-country="dominican-republic"] .map-hover_grid {
   grid-template-columns: 1fr;
 }
 
