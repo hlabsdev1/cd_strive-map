@@ -729,7 +729,7 @@ function addingContent() {
     .map((content) => {
       // console.log(listHtml);
       let isPartnersOnlyOne = false;
-      console.log(content.partners.length);
+      // console.log(content.partners.length);
       const partnersContent = content.partners
         .map((partner) => {
           return `
@@ -842,7 +842,7 @@ function addingContent() {
 function mapClickFunc() {
   const mapWrap = document.querySelector('.map_wrap');
   const map = mapWrap.querySelector('.h_map');
-  const svgTriggers = mapWrap.querySelectorAll('svg [hs-target-country]');
+  const svgTriggers = mapWrap.querySelectorAll('svg path[hs-target-country]');
   const allPopups = mapWrap.querySelectorAll(
     '.map_popup-wrap .map_popup-items'
   );
@@ -854,6 +854,18 @@ function mapClickFunc() {
   allPopups.forEach((popup) => {
     popup.classList.add('is--hide');
   });
+
+  //adding extra class to map
+  allPopups.forEach((item) => {
+    const attr = item.getAttribute('hs-target-country');
+
+    svgTriggers.forEach((svg) => {
+      if (svg.getAttribute('hs-target-country') === attr) {
+        svg.classList.add('is--active');
+      }
+    });
+  });
+
   svgTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const attr = trigger.getAttribute('hs-target-country');
@@ -888,6 +900,7 @@ function mapClickFunc() {
       const activeHoverItem = mapWrap.querySelector(
         `.map-hover_item[hs-target-country="${attr}"]`
       );
+      console.log(attr, activeHoverItem);
       hoverItems.forEach((hItem) => {
         if (hItem.classList.contains('is--active')) {
           hItem.classList.remove('is--active');
@@ -902,6 +915,7 @@ function mapClickFunc() {
         activeHoverItem.classList.add('is--active');
         tagWrapper.classList.add('is--hide');
         trigger.style.opacity = '';
+        console.log(trigger);
       }
     });
     trigger.addEventListener('mouseout', () => {

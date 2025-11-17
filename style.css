@@ -64,6 +64,14 @@ svg [hs-target-country] {
     transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
 }
 
+svg[test-svg] path[hs-target-country] {
+  fill: #DDDBD9;
+}
+
+svg[test-svg] path[hs-target-country].is--active {
+  fill: #604d64;
+}
+
 svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   stroke-width: 2;
   stroke: #604d64;
@@ -349,7 +357,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   left: 55%;
 }
 .map-tag[hs-target-country="nigeria"] {
-  bottom: 49%;
+  bottom: 50%;
   left: 48%;
 }
 .map-tag[hs-target-country="poland"] {
