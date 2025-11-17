@@ -64,6 +64,11 @@ svg [hs-target-country] {
     transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
 }
 
+svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
+  stroke-width: 2;
+  stroke: #604d64;
+}
+
 .map_popup-wrap {
     z-index: 3;
     pointer-events: none;
@@ -302,12 +307,12 @@ svg [hs-target-country] {
 
 .map-tag[hs-target-country="mexico"] {
   left: 12%;
-  top: 45%;
+  top: 46%;
 }
 
 .map-tag[hs-target-country="indonesia"] {
-  bottom: 41%;
-  right: 22%;
+  bottom: 39%;
+  right: 21.3%;
 }
 
 .map-tag[hs-target-country="vietnam"] {
@@ -323,7 +328,7 @@ svg [hs-target-country] {
   right: 26.5%;
 }
 .map-tag[hs-target-country="kazakhstan"] {
-  top: 22%;
+  top: 21%;
   right: 36%;
 }
 .map-tag[hs-target-country="uzbekistan"] {
@@ -348,7 +353,7 @@ svg [hs-target-country] {
   left: 48%;
 }
 .map-tag[hs-target-country="poland"] {
-  top: 22%;
+  top: 23%;
   right: 50%;
 }
 .map-tag[hs-target-country="spain"] {

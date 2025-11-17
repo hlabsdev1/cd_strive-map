@@ -840,14 +840,17 @@ function addingContent() {
 }
 
 function mapClickFunc() {
-  const map = document.querySelector('.h_map');
-  const svgTriggers = document.querySelectorAll('svg [hs-target-country]');
-  const allPopups = document.querySelectorAll(
+  const mapWrap = document.querySelector('.map_wrap');
+  const map = mapWrap.querySelector('.h_map');
+  const svgTriggers = mapWrap.querySelectorAll('svg [hs-target-country]');
+  const allPopups = mapWrap.querySelectorAll(
     '.map_popup-wrap .map_popup-items'
   );
-  const closeButn = document.querySelectorAll(
+  const closeButn = mapWrap.querySelectorAll(
     '.map_popup-wrap .popup-close-icon'
   );
+  const hoverItems = mapWrap.querySelectorAll('.map-hover_item');
+  const tagWrapper = mapWrap.querySelector('.map-tag_holder');
   allPopups.forEach((popup) => {
     popup.classList.add('is--hide');
   });
@@ -866,11 +869,51 @@ function mapClickFunc() {
           popup.classList.add('is--hide');
         }
       });
+      svgTriggers.forEach((svg) => {
+        if (svg.getAttribute('hs-target-country') !== attr) {
+          svg.style.opacity = 0.3;
+        }
+      });
 
       if (activePopup) {
         activePopup.classList.remove('is--hide');
         map.style.pointerEvents = 'none';
+        trigger.style.opacity = 1;
+        console.log(trigger.style.opacity);
       }
+    });
+
+    trigger.addEventListener('mouseover', () => {
+      const attr = trigger.getAttribute('hs-target-country');
+      const activeHoverItem = mapWrap.querySelector(
+        `.map-hover_item[hs-target-country="${attr}"]`
+      );
+      hoverItems.forEach((hItem) => {
+        if (hItem.classList.contains('is--active')) {
+          hItem.classList.remove('is--active');
+        }
+      });
+      svgTriggers.forEach((svg) => {
+        if (svg.getAttribute('hs-target-country') !== attr) {
+          svg.style.opacity = 0.3;
+        }
+      });
+      if (activeHoverItem) {
+        activeHoverItem.classList.add('is--active');
+        tagWrapper.classList.add('is--hide');
+        trigger.style.opacity = '';
+      }
+    });
+    trigger.addEventListener('mouseout', () => {
+      hoverItems.forEach((hItem) => {
+        if (hItem.classList.contains('is--active')) {
+          hItem.classList.remove('is--active');
+        }
+      });
+      svgTriggers.forEach((svg) => {
+        svg.style.opacity = 1;
+      });
+      tagWrapper.classList.remove('is--hide');
     });
   });
 
@@ -878,6 +921,10 @@ function mapClickFunc() {
     butn.addEventListener('click', () => {
       allPopups.forEach((popup) => {
         popup.classList.add('is--hide');
+      });
+      svgTriggers.forEach((svg) => {
+        svg.style.opacity = '';
+        console.log(`svg color: ${svg.style.opacity} `);
       });
       map.style.pointerEvents = 'auto';
     });
@@ -909,7 +956,7 @@ function mapHoverAnime() {
       if (activeHoverItem) {
         activeHoverItem.classList.add('is--active');
         tagWrapper.classList.add('is--hide');
-        trigger.style.opacity = 1;
+        trigger.style.opacity = '';
       }
     });
     trigger.addEventListener('mouseout', () => {
@@ -933,6 +980,10 @@ function sliderAnimation() {
     const prevButton = item.querySelector('.popup-arrow.is--prev');
     const nextButton = item.querySelector('.popup-arrow.is--next');
     const allSlideItems = item.querySelectorAll('.map_popup');
+
+    // allSlideItems[currentIndex].classList.add('is--active');
+
+    if (!prevButton || !nextButton) return;
 
     function handleIndexChange() {
       if (allSlideItems[currentIndex]) {
@@ -968,6 +1019,6 @@ function sliderAnimation() {
 }
 
 addingContent();
+// mapHoverAnime();
 mapClickFunc();
-mapHoverAnime();
 sliderAnimation();
