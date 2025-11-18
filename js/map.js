@@ -723,6 +723,8 @@ const mapContent = [
   },
 ];
 
+console.log(mapContent.length);
+
 function addingContent() {
   const popupWrapper = document.querySelector('.map_popup-wrap');
   const tagWrap = document.querySelector('.map-tag_holder');
@@ -789,6 +791,7 @@ function addingContent() {
                 <path d="M17.8284 8.84025L3.64542 8.84025M10.3282 16.4883L2.82837 8.98841L10.4025 1.41429" stroke="white" stroke-width="4"/>
                 </svg>
                 </div>
+                <div class="popup-nums_wrap"><span class="popup-curr">1</span>/<span class="popup-total">4</span></div>
                 <div class="popup-arrow is--next">
                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 9.06209L14.1829 9.06209M7.50013 1.41406L15 8.91393L7.42588 16.4881" stroke="white" stroke-width="4"/>
@@ -953,12 +956,17 @@ function mapClickFunc() {
 }
 
 function sliderAnimation() {
-  const allPopupItems = document.querySelectorAll('.map_popup-items');
+  const allPopupItems = document.querySelectorAll('.map_wrap .map_popup-items');
   allPopupItems.forEach((item) => {
     let currentIndex = 0;
     const prevButton = item.querySelector('.popup-arrow.is--prev');
     const nextButton = item.querySelector('.popup-arrow.is--next');
     const allSlideItems = item.querySelectorAll('.map_popup');
+    const currTxt = item.querySelector('.popup-curr');
+    const totalTxt = item.querySelector('.popup-total');
+    console.log(allPopupItems.length);
+
+    totalTxt.innerHTML = allSlideItems.length;
 
     // allSlideItems[currentIndex].classList.add('is--active');
 
@@ -970,6 +978,7 @@ function sliderAnimation() {
           slide.classList.remove('is--active');
         });
         allSlideItems[currentIndex].classList.add('is--active');
+        currTxt.innerHTML = currentIndex + 1;
       }
     }
 
@@ -998,15 +1007,78 @@ function sliderAnimation() {
 }
 
 function mapTabDownSlider() {
-  const mapComponent = document.querySelector('.h_map');
-  const computedStyle = window.getComputedStyle(mapComponent);
-  const totalWidth = computedStyle.width;
-  console.log(totalWidth);
-  const oneFold = 100;
+  const mapComponent = document.querySelector('.map-component');
+  const nextButn = document.querySelector(
+    '[hs-outer-arrows] .popup-arrow.is--next'
+  );
+  const prevButn = document.querySelector(
+    '[hs-outer-arrows] .popup-arrow.is--prev'
+  );
+  const windowWidth = window.innerWidth;
+  const oneFold = windowWidth;
+  let totalWidth = mapComponent.clientWidth - oneFold;
+  let currMove = 0;
+  let differenceMove = 0;
+
+  let currentIndex = 0;
+
+  // totalWidth = 350;
+
+  console.log(totalWidth, window.innerWidth);
+
+  function handleIndexChange() {
+    if (currMove === 0) {
+      prevButn.style.pointerEvents = 'none';
+    } else {
+      prevButn.style.pointerEvents = '';
+    }
+
+    if (currMove === totalWidth - oneFold) {
+      nextButn.style.pointerEvents = 'none';
+    } else {
+      nextButn.style.pointerEvents = '';
+    }
+  }
+
+  // if total width > currentwidth  add by one fold
+  //but if total width - currentWidth is less than one fold then add only subtracted num
+
+  nextButn.addEventListener('click', () => {
+    if (totalWidth > currMove) {
+      differenceMove = totalWidth - currMove;
+      if (differenceMove > oneFold) {
+        currMove = currMove + oneFold;
+        mapComponent.style.transform = `translateX(-${currMove}px)`;
+        currentIndex++;
+      } else {
+        currMove = currMove + differenceMove;
+        mapComponent.style.transform = `translateX(-${currMove}px)`;
+        currentIndex++;
+      }
+    }
+    console.log(totalWidth, currMove);
+
+    handleIndexChange();
+  });
+
+  prevButn.addEventListener('click', () => {
+    if (currMove > 0) {
+      if (currMove === totalWidth) {
+        currMove = currMove - differenceMove;
+        mapComponent.style.transform = `translateX(-${currMove}px)`;
+        currentIndex--;
+      } else {
+        currMove = currMove - oneFold;
+        mapComponent.style.transform = `translateX(-${currMove}px)`;
+        currentIndex--;
+      }
+    }
+    handleIndexChange();
+  });
+  handleIndexChange();
 }
 
 addingContent();
-// mapHoverAnime();
 mapClickFunc();
 sliderAnimation();
-// mapTabDownSlider();
+mapTabDownSlider();
