@@ -1,3 +1,5 @@
+const tabMediaQuery = window.innerWidth < 991;
+
 const mImgs = [
   {
     name: 'Philippines',
@@ -866,7 +868,11 @@ function mapClickFunc() {
     });
   });
 
-  svgTriggers.forEach((trigger) => {
+  const allActiveSvgTriggers = mapWrap.querySelectorAll(
+    'svg path[hs-target-country].is--active'
+  );
+
+  allActiveSvgTriggers.forEach((trigger) => {
     trigger.addEventListener('click', () => {
       const attr = trigger.getAttribute('hs-target-country');
       console.log(attr);
@@ -881,7 +887,7 @@ function mapClickFunc() {
           popup.classList.add('is--hide');
         }
       });
-      svgTriggers.forEach((svg) => {
+      allActiveSvgTriggers.forEach((svg) => {
         if (svg.getAttribute('hs-target-country') !== attr) {
           svg.style.opacity = 0.3;
         }
@@ -895,6 +901,7 @@ function mapClickFunc() {
       }
     });
 
+    if (tabMediaQuery) return;
     trigger.addEventListener('mouseover', () => {
       const attr = trigger.getAttribute('hs-target-country');
       const activeHoverItem = mapWrap.querySelector(
@@ -906,7 +913,7 @@ function mapClickFunc() {
           hItem.classList.remove('is--active');
         }
       });
-      svgTriggers.forEach((svg) => {
+      allActiveSvgTriggers.forEach((svg) => {
         if (svg.getAttribute('hs-target-country') !== attr) {
           svg.style.opacity = 0.3;
         }
@@ -924,7 +931,7 @@ function mapClickFunc() {
           hItem.classList.remove('is--active');
         }
       });
-      svgTriggers.forEach((svg) => {
+      allActiveSvgTriggers.forEach((svg) => {
         svg.style.opacity = 1;
       });
       tagWrapper.classList.remove('is--hide');
@@ -936,53 +943,11 @@ function mapClickFunc() {
       allPopups.forEach((popup) => {
         popup.classList.add('is--hide');
       });
-      svgTriggers.forEach((svg) => {
+      allActiveSvgTriggers.forEach((svg) => {
         svg.style.opacity = '';
         console.log(`svg color: ${svg.style.opacity} `);
       });
       map.style.pointerEvents = 'auto';
-    });
-  });
-}
-
-function mapHoverAnime() {
-  const mapWrap = document.querySelector('.map_wrap');
-  const svgTriggers = mapWrap.querySelectorAll('svg [hs-target-country]');
-  const hoverItems = mapWrap.querySelectorAll('.map-hover_item');
-  const tagWrapper = mapWrap.querySelector('.map-tag_holder');
-
-  svgTriggers.forEach((trigger) => {
-    trigger.addEventListener('mouseover', () => {
-      const attr = trigger.getAttribute('hs-target-country');
-      const activeHoverItem = mapWrap.querySelector(
-        `.map-hover_item[hs-target-country="${attr}"]`
-      );
-      hoverItems.forEach((hItem) => {
-        if (hItem.classList.contains('is--active')) {
-          hItem.classList.remove('is--active');
-        }
-      });
-      svgTriggers.forEach((svg) => {
-        if (svg.getAttribute('hs-target-country') !== attr) {
-          svg.style.opacity = 0.3;
-        }
-      });
-      if (activeHoverItem) {
-        activeHoverItem.classList.add('is--active');
-        tagWrapper.classList.add('is--hide');
-        trigger.style.opacity = '';
-      }
-    });
-    trigger.addEventListener('mouseout', () => {
-      hoverItems.forEach((hItem) => {
-        if (hItem.classList.contains('is--active')) {
-          hItem.classList.remove('is--active');
-        }
-      });
-      svgTriggers.forEach((svg) => {
-        svg.style.opacity = 1;
-      });
-      tagWrapper.classList.remove('is--hide');
     });
   });
 }
@@ -1032,7 +997,16 @@ function sliderAnimation() {
   });
 }
 
+function mapTabDownSlider() {
+  const mapComponent = document.querySelector('.h_map');
+  const computedStyle = window.getComputedStyle(mapComponent);
+  const totalWidth = computedStyle.width;
+  console.log(totalWidth);
+  const oneFold = 100;
+}
+
 addingContent();
 // mapHoverAnime();
 mapClickFunc();
 sliderAnimation();
+// mapTabDownSlider();

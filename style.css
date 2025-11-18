@@ -41,7 +41,7 @@ a {
 }
 
 .map_wrap {
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     max-width: 90rem;
@@ -51,12 +51,37 @@ a {
     position: relative;
 }
 
+/* MAP */
+
 .h_map {
     z-index: 1;
-    aspect-ratio: 12.05 / 6.41;
     width: 100%;
     position: relative;
 }
+
+.map-component {
+  aspect-ratio: 12.05 / 6.41;
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media only screen and (max-width: 991px) {
+.map-component {
+    width: 200%;
+    flex: 0 0 auto;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+.map-component {
+    width: 300%;
+    flex: 0 0 auto;
+  }
+}
+
 
 svg [hs-target-country] {
   fill: #604d64;
@@ -72,164 +97,11 @@ svg[test-svg] path[hs-target-country].is--active {
   fill: #604d64;
 }
 
+/* MAP TAG WRAP */
+
 svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   stroke-width: 2;
   stroke: #604d64;
-}
-
-.map_popup-wrap {
-    z-index: 3;
-    pointer-events: none;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    inset: 0%;
-}
-
-.map_popup-items {
-    pointer-events: auto;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 50%;
-    max-width: 30rem;
-    height: 85%;
-    max-height: 30rem;
-    display: flex;
-    position: absolute;
-    left: 2rem;
-    z-index: 3;
-}
-
-.map_popup-items.is--hide {
-  display: none;
-}
-
-.map_popup-items-inner {
-      width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.map_popup {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
-  display: flex;
-  flex-flow: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  overflow: hidden;
-}
-
-.map_popup-inner {
-    border-left: 3.8px solid #ff321d;
-    flex-flow: column;
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-.map_popup-top {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  background-color: white;
-  padding: 0.3rem 1rem 0.3rem 1.625rem;
-}
-
-.map_popup-top-img {
-  width: 5rem;
-  height: 3rem;
-}
-
-.map_popup-top-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.map_popup-bottom {
-    color: #fff;
-    background-color: #331a38;
-    flex: 1;
-    width: 100%;
-    min-height: 5rem;
-    padding: 1.875rem 3rem 1.875rem 1.625rem;
-    overflow-y: auto;
-}
-
-.popup-heading {
-  font-size: 1.125rem;
-  font-weight: 700;
-}
-
-.popup-body {
-  padding-top: 1.25rem;
-}
-
-.popup-list-wrap {
-    grid-column-gap: .5rem;
-    grid-row-gap: .5rem;
-    flex-flow: column;
-    padding-top: 1.25rem;
-    display: flex;
-    padding-bottom: 1.25rem;
-}
-
-.popup-list-item {
-      grid-column-gap: .625rem;
-    grid-row-gap: .625rem;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex;
-}
-
-.popup-list-icon {
-    background-color: #f53;
-    flex: none;
-    width: 0.75rem;
-    height: 0.75rem;
-    margin-top: 0.2rem;
-}
-
-.popup-list-txt {
-    font-size: 1.125rem;
-    font-weight: 600;
-}
-
-.popup_link {
-  padding: 8px 23px;
-  border-left: 5px solid #FF321D;
-  font-weight: 500;
-  font-size: 1.125rem;
-  transition: all .375s cubic-bezier(.445, .05, .55, .95);
-}
-
-.popup_link:hover {
-  background-color: white;
-  color: #331A38;
-}
-
-
-
-.map_hovered-wrap {
-    z-index: 2;
-    pointer-events: none;
-    position: absolute;
-    inset: 0%;
-}
-
-.map_popup.is--active {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 
@@ -636,4 +508,158 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 
 .component-hide.hide {
 display: none;
+}
+
+/* POPUP CARD */
+.map_popup-wrap {
+    z-index: 3;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    inset: 0%;
+}
+
+.map_popup-items {
+    pointer-events: auto;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    max-width: 30rem;
+    height: 85%;
+    max-height: 30rem;
+    display: flex;
+    position: absolute;
+    left: 2rem;
+    z-index: 3;
+}
+
+.map_popup-items.is--hide {
+  display: none;
+}
+
+.map_popup-items-inner {
+      width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map_popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.map_popup-inner {
+    border-left: 3.8px solid #ff321d;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.map_popup-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 0.3rem 1rem 0.3rem 1.625rem;
+}
+
+.map_popup-top-img {
+  width: 5rem;
+  height: 3rem;
+}
+
+.map_popup-top-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.map_popup-bottom {
+    color: #fff;
+    background-color: #331a38;
+    flex: 1;
+    width: 100%;
+    min-height: 5rem;
+    padding: 1.875rem 3rem 1.875rem 1.625rem;
+    overflow-y: auto;
+}
+
+.popup-heading {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.popup-body {
+  padding-top: 1.25rem;
+}
+
+.popup-list-wrap {
+    grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    flex-flow: column;
+    padding-top: 1.25rem;
+    display: flex;
+    padding-bottom: 1.25rem;
+}
+
+.popup-list-item {
+      grid-column-gap: .625rem;
+    grid-row-gap: .625rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+}
+
+.popup-list-icon {
+    background-color: #f53;
+    flex: none;
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-top: 0.2rem;
+}
+
+.popup-list-txt {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.popup_link {
+  padding: 8px 23px;
+  border-left: 5px solid #FF321D;
+  font-weight: 500;
+  font-size: 1.125rem;
+  transition: all .375s cubic-bezier(.445, .05, .55, .95);
+}
+
+.popup_link:hover {
+  background-color: white;
+  color: #331A38;
+}
+
+.map_hovered-wrap {
+    z-index: 2;
+    pointer-events: none;
+    position: absolute;
+    inset: 0%;
+}
+
+.map_popup.is--active {
+  opacity: 1;
+  pointer-events: auto;
 }
