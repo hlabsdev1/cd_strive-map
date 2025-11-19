@@ -901,6 +901,8 @@ function mapClickFunc() {
         map.style.pointerEvents = 'none';
         trigger.style.opacity = 1;
         console.log(trigger.style.opacity);
+        //add extra class to map_popup-wrap to handle tint overlay
+        mapWrap.querySelector('.map_popup-wrap').classList.add('is--active-overlay');
       }
     });
 
@@ -951,6 +953,8 @@ function mapClickFunc() {
         console.log(`svg color: ${svg.style.opacity} `);
       });
       map.style.pointerEvents = 'auto';
+      //Remove extra class to map_popup-wrap to handle tint overlay
+      mapWrap.querySelector('.map_popup-wrap').classList.remove('is--active-overlay');
     });
   });
 }
@@ -1029,14 +1033,18 @@ function mapTabDownSlider() {
   function handleIndexChange() {
     if (currMove === 0) {
       prevButn.style.pointerEvents = 'none';
+      prevButn.style.opacity= 0;
     } else {
       prevButn.style.pointerEvents = '';
+      prevButn.style.opacity = '';
     }
 
-    if (currMove === totalWidth - oneFold) {
+    if (currMove >= totalWidth - oneFold) {
       nextButn.style.pointerEvents = 'none';
+      nextButn.style.opacity = 0;
     } else {
       nextButn.style.pointerEvents = '';
+      nextButn.style.opacity = '';
     }
   }
 
