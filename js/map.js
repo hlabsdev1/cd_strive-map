@@ -497,6 +497,27 @@ const mapContent = [
     ],
   },
   {
+    name: `Côte d'Ivoire`,
+    id: 'ivory-coast',
+    imgList: [
+      mImgs[16].images[0],
+    ],
+    partners: [
+      {
+        name: 'Arifu',
+        logo: [mImgs[13].images[0]],
+        description: `Arifu is an edtech provider offering bite-sized, interactive training via a chatbot on popular messaging apps like WhatsApp. With support from Mastercard Strive, they supported small businesses to digitize and build resilience by improving operational efficiency, financial management, and online sales in collaboration with major players like MTN.`,
+        outcomes: [
+          `Through the MTN partnership, in Côte d'Ivoire, the content has reached over 988,000 MTN customers, merchants, and agents, with more than 72,000 actively engaging with the MoMo Coach app.`,
+          'Gates Foundation used Arifu’s business content to extend reach to women entrepreneurs in Kenya.',
+          'Some high-engagers were 19% more likely to report cost savings and 13% more likely to save business earnings.',
+          'Digitally advanced users were 74% more likely to use new services.',
+        ],
+        link: 'https://strivecommunity.org/programs/arifu ',
+      },
+    ],
+  },
+  {
     name: 'Poland',
     id: 'poland',
     imgList: [mImgs[9].images[0]],

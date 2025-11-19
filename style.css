@@ -184,6 +184,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 .map-tag[hs-target-country="kenya"] .map-tab_line,
 .map-tag[hs-target-country="uk"] .map-tab_line,
 .map-tag[hs-target-country="nigeria"] .map-tab_line,
+.map-tag[hs-target-country="ivory-coast"] .map-tab_line,
 .map-tag[hs-target-country="poland"] .map-tab_line {
   width: 1px;
   height: 20px;
@@ -203,6 +204,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 .map-tag[hs-target-country="indonesia"],
 .map-tag[hs-target-country="uzbekistan"],
 .map-tag[hs-target-country="kenya"],
+.map-tag[hs-target-country="ivory-coast"],
 .map-tag[hs-target-country="poland"] {
   flex-direction: column;
 }
@@ -261,6 +263,10 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 .map-tag[hs-target-country="nigeria"] {
   bottom: 50%;
   left: 48%;
+}
+.map-tag[hs-target-country="ivory-coast"] {
+  bottom: 45%;
+  left: 43%;
 }
 .map-tag[hs-target-country="poland"] {
   top: 23%;
