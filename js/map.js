@@ -1039,7 +1039,7 @@ function mapTabDownSlider() {
       prevButn.style.opacity = '';
     }
 
-    if (currMove >= totalWidth - oneFold) {
+    if (currMove === totalWidth) {
       nextButn.style.pointerEvents = 'none';
       nextButn.style.opacity = 0;
     } else {
