@@ -375,15 +375,15 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   right: 3.5%;
 }
 .map-hover_item[hs-target-country="bangladesh"] {
-  top: 21%;
-  right: 15.5%;
+  top: 23%;
+  right: 20.5%;
 }
 .map-hover_item[hs-target-country="kazakhstan"] {
   top: 17%;
   right: 20%;
 }
 .map-hover_item[hs-target-country="uzbekistan"] {
-  top: 33%;
+  top: 36%;
   right: 31%;
 }
 .map-hover_item[hs-target-country="ethiopia"] {
@@ -405,7 +405,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 
 .map-hover_item[hs-target-country="spain"] {
   width: 8.5em;
-  top: 27%;
+  top: 33%;
   left: 32%;
 }
 .map-hover_item[hs-target-country="uk"] {
@@ -413,7 +413,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   right: 59%;
 }
 .map-hover_item[hs-target-country="dominican-republic"] {
-  bottom: 44.7%;
+  bottom: 38.2%;
   left: 23.8%;
 }
 .map-hover_item[hs-target-country="colombia"] {
@@ -445,9 +445,9 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   bottom: 29%;
 }
 
-.map-hover_item[hs-targer-country="ivory-coast"] {
-  left: 18%;
-  bottom: 20%;
+.map-hover_item[hs-target-country="ivory-coast"] {
+  left: 41%;
+  bottom: 25%;
 }
 
 .map-hover_grid {
