@@ -147,6 +147,10 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
     font-size: clamp(0.6em, 1vw, 1em);
 }
 
+.map-hover_holder {
+  pointer-events: none;
+}
+
 .map-tag_holder.is--hide {
   opacity: 0;
 }
@@ -199,7 +203,9 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 .map-tag[hs-target-country="colombia"],
 .map-tag[hs-target-country="ecuador"],
 .map-tag[hs-target-country="cambodia"],
-.map-tag[hs-target-country="uganda"] {
+.map-tag[hs-target-country="uganda"],
+.map-tag[hs-target-country="argentina"],
+.map-tag[hs-target-country="ethiopia"] {
   flex-direction: row-reverse;
 }
 
@@ -237,7 +243,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 }
 .map-tag[hs-target-country="samoa"] {
   bottom: 31%;
-  right: 2%;
+  right: 1%;
 }
 .map-tag[hs-target-country="bangladesh"] {
   top: 41%;
@@ -252,8 +258,8 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   right: 36%;
 }
 .map-tag[hs-target-country="ethiopia"] {
-  bottom: 46%;
-  right: 40.5%;
+  bottom: 49%;
+  right: 43.5%;
 }
 .map-tag[hs-target-country="kenya"] {
   bottom: 40%;
@@ -286,7 +292,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 }
 .map-tag[hs-target-country="argentina"] {
   bottom: 15%;
-  left: 26%;
+  left: 23%;
 }
 .map-tag[hs-target-country="dominican-republic"] {
   bottom: 54.7%;
@@ -343,7 +349,6 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 }
 .map_wrap .map-hover_item.is--active {
   opacity: 1;
-  pointer-events: auto;
 }
 
 .map-hover_item[hs-target-country="mexico"] {
@@ -352,8 +357,13 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 }
 
 .map-hover_item[hs-target-country="indonesia"] {
-  bottom: 14%;
+  bottom: 12%;
   right: 17%;
+}
+
+.map-hover_item[hs-target-country="cambodia"] {
+  bottom: 37%;
+  right: 19%;
 }
 
 .map-hover_item[hs-target-country="vietnam"] {
@@ -361,8 +371,8 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   right: 9.5%;
 }
 .map-hover_item[hs-target-country="samoa"] {
-  bottom: 26%;
-  right: 2.5%;
+  bottom: 18%;
+  right: 3.5%;
 }
 .map-hover_item[hs-target-country="bangladesh"] {
   top: 21%;
@@ -377,8 +387,8 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   right: 31%;
 }
 .map-hover_item[hs-target-country="ethiopia"] {
-  bottom: 43%;
-  right: 29.5%;
+  bottom: 36%;
+  right: 40.5%;
 }
 .map-hover_item[hs-target-country="kenya"] {
   bottom: 20%;
@@ -416,8 +426,8 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 }
 
 .map-hover_item[hs-target-country="philippines"] {
-  right: 17.5%;
-  bottom: 26%;
+  right: 8.5%;
+  bottom: 20%;
 }
 
 .map-hover_item[hs-target-country="brazil"] {
@@ -426,17 +436,17 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
 }
 
 .map-hover_item[hs-target-country="argentina"] {
-  left: 28%;
+  left: 24%;
   bottom: 5%;
 }
 
 .map-hover_item[hs-target-country="uganda"] {
-  right: 30%;
-  bottom: 10%;
+  right: 43%;
+  bottom: 29%;
 }
 
 .map-hover_item[hs-targer-country="ivory-coast"] {
-  left: 25%;
+  left: 18%;
   bottom: 20%;
 }
 

@@ -156,8 +156,8 @@ const mapContent = [
     ],
     partners: [
       {
-        name: 'Scale partner: Grab',
-        logo: [mImgs[0].images[1]],
+        name: 'Scale partner: Grab & Bayan Academy',
+        logo: [mImgs[0].images[1], mImgs[0].images[5]],
         description:
           'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
         outcomes: [
@@ -236,8 +236,8 @@ const mapContent = [
     ],
     partners: [
       {
-        name: 'Scale partner: Grab',
-        logo: [mImgs[18].images[1]],
+        name: 'Scale partner: Grab & UKM Indonesia',
+        logo: [mImgs[18].images[1], mImgs[18].images[2]],
         description:
           'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
         outcomes: [
@@ -273,8 +273,8 @@ const mapContent = [
     ],
     partners: [
       {
-        name: 'Scale partner: Grab',
-        logo: [mImgs[21].images[1]],
+        name: 'Scale partner: Grab & WISE',
+        logo: [mImgs[21].images[1], mImgs[21].images[0]],
         description:
           'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
         outcomes: [
