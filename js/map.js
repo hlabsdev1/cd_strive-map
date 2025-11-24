@@ -934,6 +934,8 @@ function mapClickFunc() {
         trigger.style.opacity = 1;
         //console.log(trigger.style.opacity);
         //add extra class to map_popup-wrap to handle tint overlay
+        // disable popup arrow wrap when popup opens
+        document.querySelector('[hs-outer-arrows]').style.cssText = `pointerEvents: none; opacity: 0;`;
         mapWrap.querySelector('.map_popup-wrap').classList.add('is--active-overlay');
       }
     });
@@ -983,6 +985,8 @@ function mapClickFunc() {
         console.log(`svg color: ${svg.style.opacity} `);
       });
       map.style.pointerEvents = 'auto';
+      // enable popup arrow wrap when popup closes
+      document.querySelector('[hs-outer-arrows]').style.cssText = `pointerEvents: auto; opacity: 1;`;
       //Remove extra class to map_popup-wrap to handle tint overlay
       mapWrap.querySelector('.map_popup-wrap').classList.remove('is--active-overlay');
     });
@@ -1004,6 +1008,8 @@ function mapClickFunc() {
     allTriggers.forEach((svg) => (svg.style.opacity = ''));
 
     map.style.pointerEvents = 'auto';
+    // enable popup arrow wrap when popup closes
+    document.querySelector('[hs-outer-arrows]').style.cssText = `pointerEvents: auto; opacity: 1;`;
 
     popupWrap.classList.remove('is--active-overlay');
   });
