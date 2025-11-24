@@ -38,6 +38,7 @@ a {
   position: relative;
   overflow: hidden;
   font-family: 'Public Sans';
+  font-weight: 400;
   line-height: 130%;
   background-color: #F7F7F7;
 }
@@ -166,8 +167,11 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
     width: 0px;
     height: 0px;
     line-height: 100%;
+    pointer-events: auto;
+    cursor: pointer;
 
 }
+
 
 .map-tab_line {
   width: 20px;
@@ -330,6 +334,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
     display: flex;
     flex-direction: column;
     transition: opacity .375s cubic-bezier(.445, .05, .55, .95);
+    pointer-events: none;
 }
 
 .map_wrap .map-hover_item {
@@ -495,7 +500,7 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0px 10px;
+  padding: 5px 10px;
   transition: color .375s cubic-bezier(.445, .05, .55, .95);
   cursor: pointer;
 }
@@ -646,10 +651,11 @@ display: none;
   flex-wrap: wrap;
   background-color: white;
   padding: 0.3rem 1rem 0.3rem 1.625rem;
+  gap: 1rem;
 }
 
 .map_popup-top-img {
-  width: 5rem;
+  width: 7rem;
   height: 3rem;
 }
 
@@ -676,6 +682,7 @@ display: none;
 
 .popup-body {
   padding-top: 1.25rem;
+  font-size: 1rem;
 }
 
 .popup-list-wrap {
@@ -704,15 +711,15 @@ display: none;
 }
 
 .popup-list-txt {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-style: normal;
 }
 
 .popup_link {
   padding: 8px 23px;
   border-left: 5px solid #FF321D;
-  font-weight: 500;
-  font-size: 1.125rem;
+  font-weight: 200;
+  font-size: 1rem;
   transition: all .375s cubic-bezier(.445, .05, .55, .95);
 }
 
@@ -723,9 +730,9 @@ display: none;
 
 .map_hovered-wrap {
     z-index: 2;
-    pointer-events: none;
     position: absolute;
     inset: 0%;
+    pointer-events: none;
 }
 
 .map_popup.is--active {

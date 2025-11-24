@@ -22,7 +22,7 @@ const mImgs = [
   {
     name: 'Brazil',
     order: 2,
-    images: ['images/cufa.svg', 'images/flourish.svg', 'images/alianca.svg'],
+    images: ['images/cufa.svg', 'images/flourish.svg', 'images/alianca.svg', 'images/hoob.svg'],
   },
   {
     name: 'Mexico',
@@ -79,10 +79,10 @@ const mImgs = [
     order: 13,
     images: [
       'images/arifu.svg',
+      'images/mtn.svg',
       'images/novek.svg',
       'images/x-r-global.svg',
       'images/mesh.svg',
-      'images/mtn.svg',
     ],
   },
   {
@@ -93,7 +93,7 @@ const mImgs = [
   {
     name: 'Uzbekistan',
     order: 15,
-    images: ['images/accion.svg', 'images/marta.svg'],
+    images: ['images/accion.svg', 'images/mayasoft.png'],
   },
   {
     name: 'Nigeria',
@@ -597,7 +597,7 @@ const mapContent = [
           `Micro-entrepreneurs reported significant increases in how they scored their digital skills and confidence to adopt new digital tools (rated 9.2 out of 10) after trainings`,
           `2,153 micro-entrepreneurs adopted at least one digital tool promoted in Pymental’s capacity-building content.`,
         ],
-        link: 'https://strivecommunity.org/programs/tern-eco',
+        link: 'https://strivecommunity.org/programs/fundes-argidius',
       },
       {
         name: 'Nilus',
@@ -664,7 +664,7 @@ const mapContent = [
           `464 credit applications were submitted, including 143 from women-led businesses.`,
           `Showed strong small business demand and readiness for digital procurement finance solutions.`,
         ],
-        link: 'https://strivecommunity.org/programs/empro-dominicanrepublic',
+        link: 'https://strivecommunity.org/programs/open-contracting-partnership',
       },
       {
         name: 'Datasketch',
@@ -683,7 +683,7 @@ const mapContent = [
   {
     name: 'Brazil',
     id: 'brazil',
-    imgList: [mImgs[2].images[0], mImgs[2].images[1], mImgs[2].images[2]],
+    imgList: [mImgs[2].images[0], mImgs[2].images[1], mImgs[2].images[2], mImgs[2].images[3]],
     partners: [
       {
         name: 'Flourish Fi',
@@ -711,7 +711,7 @@ const mapContent = [
       },
       {
         name: 'Hoob Marketing',
-        logo: [],
+        logo: [mImgs[2].images[3]],
         description:
           "Hoob's Strive for Growth Facebook campaign targeted women-owned and Black-owned small businesses across Brazil, Mexico, Argentina, and Colombia.",
         outcomes: [
@@ -738,7 +738,7 @@ const mapContent = [
           '58 small businesses enhanced their digital and business skills.',
           '7 networking events connected small businesses with digital solutions.',
         ],
-        link: 'https://strivecommunity.org/programs/flourish-fi',
+        link: 'https://strivecommunity.org/programs/viqtoria',
       },
     ],
   },
@@ -790,7 +790,7 @@ function addingContent() {
                             </div>
                             <a class="popup_link" href="${
                               partner.link
-                            }">Visit Website</a>
+                            }" target="_blank" rel="noopener noreferrer">Explore the program</a>
                         </div>
                     </div>
                 </div>
@@ -834,7 +834,7 @@ function addingContent() {
       return `
       <div class="map-tag" hs-target-country="${content.id}">
         <div class="map-tab_line"></div>
-        ${content.name}
+        <div class="map-tag-name">${content.name}</div>
       </div>
     `;
     })
@@ -869,6 +869,8 @@ function mapClickFunc() {
   const mapWrap = document.querySelector('.map_wrap');
   const map = mapWrap.querySelector('.h_map');
   const svgTriggers = mapWrap.querySelectorAll('svg path[hs-target-country]');
+  // ALSO capture all text map labels as triggers
+  const mapTagTriggers = mapWrap.querySelectorAll('.map_hovered-wrap .map-tag[hs-target-country]');
   const allPopups = mapWrap.querySelectorAll(
     '.map_popup-wrap .map_popup-items'
   );
@@ -876,7 +878,6 @@ function mapClickFunc() {
     '.map_popup-wrap .popup-close-icon'
   );
   const hoverItems = mapWrap.querySelectorAll('.map-hover_item');
-  const tagWrapper = mapWrap.querySelector('.map-tag_holder');
   allPopups.forEach((popup) => {
     popup.classList.add('is--hide');
   });
@@ -890,14 +891,24 @@ function mapClickFunc() {
         svg.classList.add('is--active');
       }
     });
+    mapTagTriggers.forEach((svg) => {
+      if (svg.getAttribute('hs-target-country') === attr) {
+        svg.classList.add('is--active');
+      }
+    });
   });
 
   const allActiveSvgTriggers = mapWrap.querySelectorAll(
     'svg path[hs-target-country].is--active'
   );
 
-  allActiveSvgTriggers.forEach((trigger) => {
-    trigger.addEventListener('click', () => {
+   const mapTagActiveTriggers = mapWrap.querySelectorAll('.map_hovered-wrap .map-tag[hs-target-country].is--active');
+
+
+  const allTriggers = [...allActiveSvgTriggers, ...mapTagActiveTriggers];
+  allTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.stopPropagation();
       const attr = trigger.getAttribute('hs-target-country');
       console.log(attr);
 
@@ -911,7 +922,7 @@ function mapClickFunc() {
           popup.classList.add('is--hide');
         }
       });
-      allActiveSvgTriggers.forEach((svg) => {
+      allTriggers.forEach((svg) => {
         if (svg.getAttribute('hs-target-country') !== attr) {
           svg.style.opacity = 0.3;
         }
@@ -921,7 +932,7 @@ function mapClickFunc() {
         activePopup.classList.remove('is--hide');
         map.style.pointerEvents = 'none';
         trigger.style.opacity = 1;
-        console.log(trigger.style.opacity);
+        //console.log(trigger.style.opacity);
         //add extra class to map_popup-wrap to handle tint overlay
         mapWrap.querySelector('.map_popup-wrap').classList.add('is--active-overlay');
       }
@@ -939,14 +950,13 @@ function mapClickFunc() {
           hItem.classList.remove('is--active');
         }
       });
-      allActiveSvgTriggers.forEach((svg) => {
+      allTriggers.forEach((svg) => {
         if (svg.getAttribute('hs-target-country') !== attr) {
           svg.style.opacity = 0.3;
         }
       });
       if (activeHoverItem) {
         activeHoverItem.classList.add('is--active');
-        tagWrapper.classList.add('is--hide');
         trigger.style.opacity = '';
         console.log(trigger);
       }
@@ -957,10 +967,9 @@ function mapClickFunc() {
           hItem.classList.remove('is--active');
         }
       });
-      allActiveSvgTriggers.forEach((svg) => {
+      allTriggers.forEach((svg) => {
         svg.style.opacity = 1;
       });
-      tagWrapper.classList.remove('is--hide');
     });
   });
 
@@ -969,7 +978,7 @@ function mapClickFunc() {
       allPopups.forEach((popup) => {
         popup.classList.add('is--hide');
       });
-      allActiveSvgTriggers.forEach((svg) => {
+      allTriggers.forEach((svg) => {
         svg.style.opacity = '';
         console.log(`svg color: ${svg.style.opacity} `);
       });
@@ -977,6 +986,26 @@ function mapClickFunc() {
       //Remove extra class to map_popup-wrap to handle tint overlay
       mapWrap.querySelector('.map_popup-wrap').classList.remove('is--active-overlay');
     });
+  });
+
+    // CLICK OUTSIDE POPUP TO CLOSE
+  mapWrap.addEventListener('click', (event) => {
+    const popupWrap = mapWrap.querySelector('.map_popup-wrap');
+
+    // Only run when popup is active
+    if (!popupWrap.classList.contains('is--active-overlay')) return;
+
+    // Ignore clicks inside actual popup content
+    if (event.target.closest('.map_popup-items')) return;
+
+    // ---- SAME LOGIC AS CLOSE BUTTON ---- //
+    allPopups.forEach((popup) => popup.classList.add('is--hide'));
+
+    allTriggers.forEach((svg) => (svg.style.opacity = ''));
+
+    map.style.pointerEvents = 'auto';
+
+    popupWrap.classList.remove('is--active-overlay');
   });
 }
 
@@ -989,11 +1018,21 @@ function sliderAnimation() {
     const allSlideItems = item.querySelectorAll('.map_popup');
     const currTxt = item.querySelector('.popup-curr');
     const totalTxt = item.querySelector('.popup-total');
+    const arrowWrap = item.querySelector('.popup-arrow-wrap');
     console.log(allPopupItems.length);
+    const totalSlides = allSlideItems.length;
 
     totalTxt.innerHTML = allSlideItems.length;
 
     // allSlideItems[currentIndex].classList.add('is--active');
+    // 🔥 NEW: Hide entire arrow wrapper if only 1 slide
+    // --------------------------------------
+    if (totalSlides <= 1) {
+      if (arrowWrap) arrowWrap.style.display = "none";
+    } else {
+      if (arrowWrap) arrowWrap.style.display = ""; // restore default
+    }
+    // --------------------------------------
 
     if (!prevButton || !nextButton) return;
 
