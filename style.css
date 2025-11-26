@@ -63,18 +63,27 @@ a {
 }
 
 .map-component {
-  aspect-ratio: 12.05 / 6.41;
   width: 100%; 
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   position: relative;
   transition: transform .375s cubic-bezier(.445, .05, .55, .95);
+  overflow: auto;
+}
+
+.map-inner {
+  aspect-ratio: 12.05 / 6.41;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 [hs-outer-arrows].popup-arrow-wrap {
   position: absolute;
-  display: flex;
+  display: none !important;
   align-items: center;
   justify-content: center;
   bottom: 0;
@@ -99,18 +108,21 @@ a {
 }
 
 @media only screen and (max-width: 991px) {
-.map-component {
+.map-inner {
     width: 200%;
     flex: 0 0 auto;
   }
 }
 
 @media only screen and (max-width: 560px) {
-.map-component {
+.map-inner {
     width: auto;
     height: 90vh;
     flex: 0 0 auto;
   }
+.map-component{
+  padding-right: 0.8rem;
+}
 }
 
 
@@ -525,6 +537,8 @@ svg [hs-target-country="samoa"], svg [hs-target-country="dominican-republic"] {
     display: flex;
 }
 
+
+
 .popup-arrow {
     aspect-ratio: 1;
     color: #fff;
@@ -692,7 +706,7 @@ display: none;
 
 .popup-body {
   padding-top: 1.25rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .popup-list-wrap {
@@ -721,7 +735,7 @@ display: none;
 }
 
 .popup-list-txt {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-style: normal;
 }
 

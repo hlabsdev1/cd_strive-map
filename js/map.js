@@ -147,38 +147,12 @@ const mapContent = [
     id: 'philippines',
     imgList: [
       mImgs[0].images[0],
-      mImgs[0].images[1],
-      mImgs[0].images[2],
       mImgs[0].images[3],
-      mImgs[0].images[4],
-      mImgs[0].images[5],
       mImgs[0].images[6],
+      mImgs[0].images[1],
+      mImgs[0].images[5],
     ],
     partners: [
-      {
-        name: 'Scale partner: Grab & Bayan Academy',
-        logo: [mImgs[0].images[1], mImgs[0].images[5]],
-        description:
-          'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
-        outcomes: [
-          'Upskilling content reached 235,000 Grab drivers and merchants',
-          'Driver-learners adopted 1.3 times more digital tools than non-learners.',
-          'Over 90% of Grab drivers felt inspired to start a new business after watching  micro-training videos.',
-        ],
-        link: 'https://strivecommunity.org/programs/micro-learning-videos',
-      },
-      {
-        name: 'ChatGenie',
-        logo: [mImgs[0].images[6]],
-        description:
-          'Enabled small businesses to sell within popular social media and messaging apps, turning conversations into conversions. With support from the Mastercard Strive Innovation Fund, ChatGenie tested new features to bring added value to Filipino micro-enterprises engaging in social commerce.',
-        outcomes: [
-          'Strong uptake—about 1,600 small businesses onboarded',
-          'ChatGenie expanded its merchant incubation program, adding 151 new merchants and driving over $250,000 in gross sales',
-          'Small businesses reported notable sales growth and higher conversion rates, with one achieving a remarkable 1,400% increase in sales.',
-        ],
-        link: 'https://strivecommunity.org/programs/chatgenie',
-      },
       {
         name: 'Boost Capital',
         logo: [mImgs[0].images[0]],
@@ -202,6 +176,30 @@ const mapContent = [
           'Delivered efficiency and convenience to small businesses: 84% valued anytime ordering, and 67% saved time by avoiding trips to wholesalers.',
         ],
         link: 'https://www.strivecommunity.org/programs/and-frnds',
+      },
+      {
+        name: 'ChatGenie',
+        logo: [mImgs[0].images[6]],
+        description:
+          'Enabled small businesses to sell within popular social media and messaging apps, turning conversations into conversions. With support from the Mastercard Strive Innovation Fund, ChatGenie tested new features to bring added value to Filipino micro-enterprises engaging in social commerce.',
+        outcomes: [
+          'Strong uptake—about 1,600 small businesses onboarded',
+          'ChatGenie expanded its merchant incubation program, adding 151 new merchants and driving over $250,000 in gross sales',
+          'Small businesses reported notable sales growth and higher conversion rates, with one achieving a remarkable 1,400% increase in sales.',
+        ],
+        link: 'https://strivecommunity.org/programs/chatgenie',
+      },
+      {
+        name: 'Scale partner: Grab & Bayan Academy',
+        logo: [mImgs[0].images[1], mImgs[0].images[5]],
+        description:
+          'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
+        outcomes: [
+          'Upskilling content reached 235,000 Grab drivers and merchants',
+          'Driver-learners adopted 1.3 times more digital tools than non-learners.',
+          'Over 90% of Grab drivers felt inspired to start a new business after watching  micro-training videos.',
+        ],
+        link: 'https://strivecommunity.org/programs/micro-learning-videos',
       },
     ],
   },
@@ -228,25 +226,11 @@ const mapContent = [
     name: 'Indonesia',
     id: 'indonesia',
     imgList: [
-      mImgs[18].images[0],
+      mImgs[18].images[4],
       mImgs[18].images[1],
       mImgs[18].images[2],
-      mImgs[18].images[3],
-      mImgs[18].images[4],
     ],
     partners: [
-      {
-        name: 'Scale partner: Grab & UKM Indonesia',
-        logo: [mImgs[18].images[1], mImgs[18].images[2]],
-        description:
-          'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
-        outcomes: [
-          'Upskilling content reached 235,000 Grab drivers and merchants',
-          'Driver-learners adopted 1.3 times more digital tools than non-learners.',
-          'Over 90% of Grab drivers felt inspired to start a new business after watching  micro-training videos.',
-        ],
-        link: 'https://strivecommunity.org/programs/micro-learning-videos',
-      },
       {
         name: 'Alner',
         logo: [mImgs[18].images[4]],
@@ -259,22 +243,9 @@ const mapContent = [
         ],
         link: 'https://strivecommunity.org/programs/Alner',
       },
-    ],
-  },
-  {
-    name: 'Vietnam',
-    id: 'vietnam',
-    imgList: [
-      mImgs[21].images[0],
-      mImgs[21].images[1],
-      mImgs[21].images[2],
-      mImgs[21].images[3],
-      mImgs[21].images[4],
-    ],
-    partners: [
       {
-        name: 'Scale partner: Grab & WISE',
-        logo: [mImgs[21].images[1], mImgs[21].images[0]],
+        name: 'Scale partner: Grab & UKM Indonesia',
+        logo: [mImgs[18].images[1], mImgs[18].images[2]],
         description:
           'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
         outcomes: [
@@ -284,6 +255,17 @@ const mapContent = [
         ],
         link: 'https://strivecommunity.org/programs/micro-learning-videos',
       },
+    ],
+  },
+  {
+    name: 'Vietnam',
+    id: 'vietnam',
+    imgList: [
+      mImgs[21].images[4],
+      mImgs[21].images[1],
+      mImgs[21].images[0],
+    ],
+    partners: [
       {
         name: 'SoBanHang',
         logo: [mImgs[21].images[4]],
@@ -296,6 +278,18 @@ const mapContent = [
           'Follow-on partnership established with Strive Women on financial inclusion products.',
         ],
         link: 'https://strivecommunity.org/programs/SoBanHang',
+      },
+      {
+        name: 'Scale partner: Grab & WISE',
+        logo: [mImgs[21].images[1], mImgs[21].images[0]],
+        description:
+          'Equipped micro-entrepreneurs in Southeast Asia, including Grab drivers and merchants, with digital skills to start or grow their businesses. Tailored micro-training toolkits helped participants digitize operations, access financial services, become more digitally fluent, and engage more effectively in digital markets.',
+        outcomes: [
+          'Upskilling content reached 235,000 Grab drivers and merchants',
+          'Driver-learners adopted 1.3 times more digital tools than non-learners.',
+          'Over 90% of Grab drivers felt inspired to start a new business after watching  micro-training videos.',
+        ],
+        link: 'https://strivecommunity.org/programs/micro-learning-videos',
       },
     ],
   },
@@ -340,11 +334,11 @@ const mapContent = [
   {
     name: 'Kazakhstan',
     id: 'kazakhstan',
-    imgList: [mImgs[11].images[0], mImgs[11].images[1]],
+    imgList: [mImgs[11].images[1], mImgs[11].images[0]],
     partners: [
       {
         name: 'Beksar',
-        logo: [mImgs[11].images[1]],
+        logo: [mImgs[11].images[1], mImgs[11].images[0]],
         description: `Embedded finance solution that supports small businesses with retail automation, digital financial services, and data-driven tools to boost efficiency and resilience. By integrating with local financial institutions, it leverages real-time data for credit-scoring and inclusive financing, enabling access to working capital for businesses—especially women-led enterprises—that often lack formal financial records.`,
         outcomes: [],
         link: 'https://www.strivecommunity.org/programs/Beksar-kazakhstan ',
@@ -354,11 +348,11 @@ const mapContent = [
   {
     name: 'Uzbekistan',
     id: 'uzbekistan',
-    imgList: [mImgs[15].images[0], mImgs[15].images[1]],
+    imgList: [mImgs[15].images[1], mImgs[15].images[0]],
     partners: [
       {
         name: 'Mayasoft',
-        logo: [],
+        logo: [mImgs[15].images[1], mImgs[15].images[0]],
         description: `Mayasoft’s MARTA solution is a mobile point-of-sale system with no subscription or hardware costs that works on any NFC-enabled smartphone, even with poor internet connection. With MARTA, small businesses can accept digital payments and unlock working capital through instant merchant settlements and data trails for credit assessments.`,
         outcomes: [
           'Reached over 320,000 micro- and small businesses. Over 27,000 trialed the product and more than 14,000 adopted it for continued use.',
@@ -393,7 +387,6 @@ const mapContent = [
     id: 'kenya',
     imgList: [
       mImgs[13].images[0],
-      mImgs[13].images[1],
       mImgs[13].images[2],
       mImgs[13].images[3],
       mImgs[13].images[4],
@@ -401,7 +394,7 @@ const mapContent = [
     partners: [
       {
         name: 'MESH',
-        logo: [mImgs[13].images[3]],
+        logo: [mImgs[13].images[4]],
         description: `MESH is an online community for informal young entrepreneurs in Kenya. Mastercard Strive supported platform development and growth, the creation of training tools, and a pilot of a credit product for entrepreneurs using MESH's data and community approach to financial inclusion.`,
         outcomes: [
           'After joining MESH, 53% of surveyed users reported earning more than KES 6,000 per month, up from 27% before joining MESH.',
@@ -412,7 +405,7 @@ const mapContent = [
       },
       {
         name: 'Novek',
-        logo: [mImgs[13].images[1]],
+        logo: [mImgs[13].images[2]],
         description: `Designs and builds tech-enabled vending machines that dispense household staples to increase sales for micro-retailers. With support from Mastercard Strive, their washing powder dispensers added a new revenue stream, reduced stockouts, and eliminated single-use plastics for micro- and small retailers.`,
         outcomes: [
           'Micro-retailers sold over 50 kg of product in four months.',
@@ -423,7 +416,7 @@ const mapContent = [
       },
       {
         name: 'XRGlobal',
-        logo: [mImgs[13].images[2]],
+        logo: [mImgs[13].images[3]],
         description: `XR Global, in partnership with Hello Tractor in Kenya, tested the potential of virtual reality (VR) for upskilling small businesses through an immersive multi-user learning environment.`,
         outcomes: [
           '200 small businesses reported increased knowledge and skill',
@@ -454,7 +447,7 @@ const mapContent = [
     partners: [
       {
         name: 'Arifu',
-        logo: [mImgs[12].images[0]],
+        logo: [mImgs[12].images[0], mImgs[12].images[1]],
         description: `Arifu is an edtech provider offering bite-sized, interactive training via a chatbot on popular messaging apps like WhatsApp. With support from Mastercard Strive, they supported small businesses to digitize and build resilience by improving operational efficiency, financial management, and online sales in collaboration with major players like MTN.`,
         outcomes: [
           `Through the MTN partnership, in Côte d'Ivoire, the content has reached over 988,000 MTN customers, merchants, and agents, with more than 72,000 actively engaging with the MoMo Coach app.`,
@@ -469,7 +462,7 @@ const mapContent = [
   {
     name: 'Nigeria',
     id: 'nigeria',
-    imgList: [mImgs[16].images[0], mImgs[16].images[1], mImgs[16].images[2]],
+    imgList: [mImgs[16].images[0], mImgs[16].images[2]],
     partners: [
       {
         name: 'Arifu',
@@ -500,12 +493,12 @@ const mapContent = [
     name: `Côte d'Ivoire`,
     id: 'ivory-coast',
     imgList: [
-      mImgs[16].images[0],
+      mImgs[17].images[0], mImgs[17].images[1]
     ],
     partners: [
       {
         name: 'Arifu',
-        logo: [mImgs[13].images[0]],
+        logo: [mImgs[17].images[0], mImgs[17].images[1]],
         description: `Arifu is an edtech provider offering bite-sized, interactive training via a chatbot on popular messaging apps like WhatsApp. With support from Mastercard Strive, they supported small businesses to digitize and build resilience by improving operational efficiency, financial management, and online sales in collaboration with major players like MTN.`,
         outcomes: [
           `Through the MTN partnership, in Côte d'Ivoire, the content has reached over 988,000 MTN customers, merchants, and agents, with more than 72,000 actively engaging with the MoMo Coach app.`,
@@ -1076,83 +1069,83 @@ function sliderAnimation() {
   });
 }
 
-function mapTabDownSlider() {
-  const mapComponent = document.querySelector('.map-component');
-  const nextButn = document.querySelector(
-    '[hs-outer-arrows] .popup-arrow.is--next'
-  );
-  const prevButn = document.querySelector(
-    '[hs-outer-arrows] .popup-arrow.is--prev'
-  );
-  const windowWidth = window.innerWidth;
-  const oneFold = windowWidth;
-  let totalWidth = mapComponent.clientWidth - oneFold;
-  let currMove = 0;
-  let differenceMove = 0;
+// function mapTabDownSlider() {
+//   const mapComponent = document.querySelector('.map-component');
+//   const nextButn = document.querySelector(
+//     '[hs-outer-arrows] .popup-arrow.is--next'
+//   );
+//   const prevButn = document.querySelector(
+//     '[hs-outer-arrows] .popup-arrow.is--prev'
+//   );
+//   const windowWidth = window.innerWidth;
+//   const oneFold = windowWidth;
+//   let totalWidth = mapComponent.clientWidth - oneFold;
+//   let currMove = 0;
+//   let differenceMove = 0;
 
-  let currentIndex = 0;
+//   let currentIndex = 0;
 
-  // totalWidth = 350;
+//   // totalWidth = 350;
 
-  console.log(totalWidth, window.innerWidth);
+//   console.log(totalWidth, window.innerWidth);
 
-  function handleIndexChange() {
-    if (currMove === 0) {
-      prevButn.style.pointerEvents = 'none';
-      prevButn.style.opacity= 0;
-    } else {
-      prevButn.style.pointerEvents = '';
-      prevButn.style.opacity = '';
-    }
+//   function handleIndexChange() {
+//     if (currMove === 0) {
+//       prevButn.style.pointerEvents = 'none';
+//       prevButn.style.opacity= 0;
+//     } else {
+//       prevButn.style.pointerEvents = '';
+//       prevButn.style.opacity = '';
+//     }
 
-    if (currMove === totalWidth) {
-      nextButn.style.pointerEvents = 'none';
-      nextButn.style.opacity = 0;
-    } else {
-      nextButn.style.pointerEvents = '';
-      nextButn.style.opacity = '';
-    }
-  }
+//     if (currMove === totalWidth) {
+//       nextButn.style.pointerEvents = 'none';
+//       nextButn.style.opacity = 0;
+//     } else {
+//       nextButn.style.pointerEvents = '';
+//       nextButn.style.opacity = '';
+//     }
+//   }
 
-  // if total width > currentwidth  add by one fold
-  //but if total width - currentWidth is less than one fold then add only subtracted num
+//   // if total width > currentwidth  add by one fold
+//   //but if total width - currentWidth is less than one fold then add only subtracted num
 
-  nextButn.addEventListener('click', () => {
-    if (totalWidth > currMove) {
-      differenceMove = totalWidth - currMove;
-      if (differenceMove > oneFold) {
-        currMove = currMove + oneFold;
-        mapComponent.style.transform = `translateX(-${currMove}px)`;
-        currentIndex++;
-      } else {
-        currMove = currMove + differenceMove;
-        mapComponent.style.transform = `translateX(-${currMove}px)`;
-        currentIndex++;
-      }
-    }
-    console.log(totalWidth, currMove);
+//   nextButn.addEventListener('click', () => {
+//     if (totalWidth > currMove) {
+//       differenceMove = totalWidth - currMove;
+//       if (differenceMove > oneFold) {
+//         currMove = currMove + oneFold;
+//         mapComponent.style.transform = `translateX(-${currMove}px)`;
+//         currentIndex++;
+//       } else {
+//         currMove = currMove + differenceMove;
+//         mapComponent.style.transform = `translateX(-${currMove}px)`;
+//         currentIndex++;
+//       }
+//     }
+//     console.log(totalWidth, currMove);
 
-    handleIndexChange();
-  });
+//     handleIndexChange();
+//   });
 
-  prevButn.addEventListener('click', () => {
-    if (currMove > 0) {
-      if (currMove === totalWidth) {
-        currMove = currMove - differenceMove;
-        mapComponent.style.transform = `translateX(-${currMove}px)`;
-        currentIndex--;
-      } else {
-        currMove = currMove - oneFold;
-        mapComponent.style.transform = `translateX(-${currMove}px)`;
-        currentIndex--;
-      }
-    }
-    handleIndexChange();
-  });
-  handleIndexChange();
-}
+//   prevButn.addEventListener('click', () => {
+//     if (currMove > 0) {
+//       if (currMove === totalWidth) {
+//         currMove = currMove - differenceMove;
+//         mapComponent.style.transform = `translateX(-${currMove}px)`;
+//         currentIndex--;
+//       } else {
+//         currMove = currMove - oneFold;
+//         mapComponent.style.transform = `translateX(-${currMove}px)`;
+//         currentIndex--;
+//       }
+//     }
+//     handleIndexChange();
+//   });
+//   handleIndexChange();
+// }
 
 addingContent();
 mapClickFunc();
 sliderAnimation();
-mapTabDownSlider();
+// mapTabDownSlider();
