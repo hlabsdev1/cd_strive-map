@@ -221,7 +221,7 @@ const mapContent = [
         link: 'https://www.strivecommunity.org/programs/boost-capital-philippines',
       },
     ],
-  },
+  },  
   {
     name: 'Indonesia',
     id: 'indonesia',
